@@ -1,0 +1,50 @@
+.recommendwrap {
+    position: relative;
+}
+.recommendbtn {
+    font-weight: $global-weight-bold;
+
+    width: 100%;
+    margin: 0 0 2.5rem;
+    padding: 1.25em 1em;
+
+    text-transform: uppercase;
+
+    color: $white;
+    border: .125em solid  scale-color($alert-color, $lightness: -14%);
+    background-color: $alert-color;
+    //box-shadow: 0 0 1.5em 0 rgba(#000,.25);
+    &:focus,
+    &:hover {
+        color: $white;
+        background-color: scale-color($alert-color, $lightness: -14%);;
+    }
+}
+
+
+.recommend-dropdown {
+    width:100%;
+    //max-width:320px;
+    //box-shadow: 0 0 0 100vw rgba(#000,.5);
+    border:1px solid scale-color($alert-color, $lightness: -15%);
+    //border-top: none;
+    padding: 10% 7% 7%;
+    text-align: center;
+    .icon {
+        font-size: 2rem;
+        color:$alert-color;
+        margin-bottom: .5em;
+    }
+    h3 {
+        font-size: 1.333rem;
+        font-family: $body-font-family;
+    }
+    p {
+        font-size: 1.25rem;
+        margin-bottom: 2rem;
+    }
+}
+
+.fb-like {
+    width:100%;
+}

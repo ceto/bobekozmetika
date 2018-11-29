@@ -1,0 +1,128 @@
+img {
+    image-rendering: -webkit-optimize-contrast;
+}
+
+html {
+    @media screen and (min-width: 110em) {
+        font-size: 105.625%;
+    }
+}
+.grid-container {
+    @include breakpoint(tablet) {
+        max-width: 95%;
+    }
+    @include breakpoint(large) {
+
+    }
+    @include breakpoint(xlarge) {
+        max-width: 92%;
+    }
+    @include breakpoint(xxlarge) {
+        max-width: 90%;
+    }
+    @media screen and (min-width: 110em) {
+        max-width: $global-width;
+    }
+    .grid-container {
+        @include breakpoint(tablet) {
+            max-width: $global-width;
+        }
+        @include breakpoint(large) {
+            max-width: $global-width;
+        }
+        @include breakpoint(xlarge) {
+            max-width: $global-width;
+        }
+        @include breakpoint(xxlarge) {
+            max-width: $global-width;
+        }
+    }
+
+}
+
+.lead {
+    //font-family: $header-font-family;
+    font-weight: $global-weight-bold;
+    @include breakpoint(medium down) {
+        font-size: 100%;
+    }
+}
+
+.readmore {
+    display: inline-block;
+    text-transform: uppercase;
+    font-weight: $global-weight-bold;
+    font-size: .666em;
+    &:before {
+        content: '\00bb'+' ';
+    }
+    &:hover, &:focus {
+        color:$alert-color;
+    }
+}
+
+.readmore--large {
+    font-size: .875rem;
+}
+.readmore--light {
+    color:$white;
+    &:hover, &:focus {
+        color:$alert-color;
+    }
+}
+.button {
+    //font-family: $header-font-family;
+    font-weight: $global-weight-bold;
+    text-transform: uppercase;
+    text-shadow: 0 0 2px rgba(#000,.25);
+}
+
+blockquote {
+    &, & p {
+        font-size: 1.25rem;
+        //font-style: italic;
+        //color:$secondary-color;
+        //font-family: $header-font-family;
+        font-weight: $global-weight-bold;
+    }
+
+    cite {
+        font-family: $header-font-family;
+        font-style: normal;
+        color:$body-font-color;
+        font-size:1.125rem;
+        //font-weight: $global-weight-bold;
+    }
+}
+
+.grid-thumbs {
+    .thumbnail {
+        margin-bottom:0;
+    }
+}
+
+.pagination {
+    font-family: $header-font-family;
+    font-weight: $global-weight-bold;
+}
+
+.bodycopy {
+    p, ul, ol, .pswp, blockquote {
+        & + h1, & + h2, & + h3, & + h4, & + h5, & + h6 {
+            margin-top: 2rem;
+        }
+    }
+}
+
+//resp video
+.entry-content-asset {
+    position: relative;
+    height:0;
+    padding-bottom: 56.25%;
+    iframe {
+        position: absolute;
+        left:0; top:0;
+        width: 100%;
+        height: 100%;
+    }
+}

@@ -1,0 +1,59 @@
+.blogcage {
+    list-style: none;
+    margin:0;
+    padding:0;
+}
+
+.blogcage__item {
+    @include clearfix;
+    margin:0 0 .5em;
+    font-size: 1rem;
+
+}
+
+.blogcage__label {
+    //display:none;
+    //margin-right: -.25em;
+    line-height: 1;
+    display: inline-block;
+    color:$primary-color;
+    svg {
+        font-size: .875em;
+        transform: translateY(.125em);
+    }
+}
+
+.blogcage__title {
+    font-size: 1em;
+    float:left;
+    width:calc(100% - 2.875rem);
+    margin:0;
+
+    a {
+        color: inherit;
+        &:hover, &:focus {
+            color:$alert-color;
+        }
+
+    }
+}
+
+.blogcage__updated {
+    padding-top: .333em;
+    line-height: $header-lineheight;
+    float:left;
+    display: block;
+    width:2.875rem;
+    font-size: .75em;
+    font-family: $header-font-family;
+    color:$alert-color;
+    font-weight: $global-weight-bold;
+    //text-transform: capitalize;
+
+}
+
+.blogcage__updated--text {
+    font-size: .666em;
+    padding-top: .5333em;
+        text-transform: uppercase;
+}

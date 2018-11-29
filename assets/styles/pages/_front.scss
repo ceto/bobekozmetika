@@ -1,0 +1,49 @@
+.front__thecontent {
+    padding-top: 3.5vw;
+    padding-bottom: 8rem;
+    background-image: url(../images/jump-crop.jpg);
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-size: rem-calc(480) auto;
+    background-color: #fff;
+
+    @include breakpoint(tablet) {
+        padding-bottom: 15rem;
+        background-size: rem-calc(768) auto;
+    }
+    @include breakpoint(large) {
+        padding-bottom: 27rem;
+        background-size: $global-width auto;
+    }
+
+
+
+    .widget--blogcage {
+        background-color: $xxlight-gray;
+        border:1px solid $xlight-gray;
+        padding: 7% 8% 7%;
+        margin-bottom:1rem;
+        .readmore {
+            display: inline-block;
+            margin-top: 2em;
+        }
+    }
+}
+
+.front__bottom {
+}
+
+.widget--frontpage {
+    &.widget_media_image {
+        padding: 1.5rem 8% 1.5rem;
+        background-color: $xxlight-gray;
+        border:1px solid $xlight-gray;
+        margin-bottom:1rem;
+        
+        text-align: center;
+        img {
+            border:1px solid $xlight-gray;
+            max-width: 284px !important;
+        }
+    }
+}
