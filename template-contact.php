@@ -40,7 +40,7 @@
                             <a href="mailto:szalon@bobekozmetika.hu">szalon@bobekozmetika.hu</a>
                         </p>
                         <p><strong>És még:</strong><br />
-                            <a href="https://www.facebook.com/TelekiBlankaKozgazdasagiSzki/" target="_blank" rel="noopener">Facebook</a>
+                            <a href="#" target="_blank" rel="noopener">Facebook</a>
                         </p>
                     </div>
                     <div class="cell medium-6 large-6">
