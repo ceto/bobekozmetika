@@ -2,6 +2,7 @@
     @include clearfix();
     display: block;
     font-size: .75rem;
+    color:inherit;
     &:hover, &focus {
         .brand__descr {
 
@@ -22,12 +23,12 @@
     image-rendering: -webkit-optimize-contrast;
 }
 .brand__name {
-    font-size: 2em;
+    font-size: 1em;
     font-weight: $global-weight-bold;
     line-height: 1;
 
     display: block;
-    float: right;
+    //float: right;
     //background-color: red;
 
     width: calc(100% - 2em);

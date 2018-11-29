@@ -20,5 +20,5 @@
   <div class="postcard__excerpt">
     <?php the_excerpt(); ?>
   </div>
-  <a class="postcard__action readmore" href="<?php the_permalink(); ?>">Részletek</a>
+  <a class="postcard__action areadmore button success tiny" href="<?php the_permalink(); ?>">Részletek</a>
 </article>

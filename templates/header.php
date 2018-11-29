@@ -2,7 +2,7 @@
     <div class="grid-container">
         <div class="grid-x grid-margin-x">
             <div class="cell">
-                <a href="https://bgaszc-teleki.e-kreta.hu" target="_blank" class="toprow__action">E-NAPLÓ</a>
+                <a href="#" target="_blank" class="toprow__action">Kapcsolat</a>
                 <nav class="toprow__nav">
                     <?php
                     if (has_nav_menu('secondary_navigation')) :
@@ -22,8 +22,8 @@
                 <div class="banner__branding">
                     <a class="brand" href="<?= esc_url(home_url('/')); ?>">
                         <img class="brand__logo" src="<?= get_stylesheet_directory_uri(); ?>/dist/images/logo.svg" alt="<?php bloginfo('name'); ?>">
-                        <span class="brand__name"><span>BGSZC </span>Teleki</span>
-                        <span class="brand__descr">Közgazdasági Szakgimnázium, Budapest</span>
+                        <span class="brand__name">Böbe <span>Kozmetika </span></span>
+                        <span class="brand__descr">Szalon kezelések Pesterzsébeten</span>
                     </a>
                 </div>
             </div>

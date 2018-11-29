@@ -1,7 +1,9 @@
 .widget__title {
-    font-size: 1rem;
+    font-size: .875rem;
     font-family: $body-font-family;
     margin:0 0 .875rem;
+    //font-weight: $global-weight-normal;
+    //text-transform: uppercase;
     //color:$primary-color;
 
     .widget--footer & {
@@ -9,8 +11,8 @@
         color:$primary-color;
     }
     .kepzes__nav & {
-        font-family: $header-font-family;
-        color:$alert-color;
+        //font-family: $header-font-family;
+        //color:$alert-color;
         //font-size: 1rem;
         //text-transform: uppercase;
     }
@@ -18,7 +20,7 @@
 
 .widget__readmore {
     //font-size: .75em;
-    color:$alert-color;
+    color:$dark-gray;
 }
 .widget__body {
     font-size: .875rem;

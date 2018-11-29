@@ -18,7 +18,7 @@
 
 
     //color:$primary-color;
-    font-family: $body-font-family;
+    //font-family: $body-font-family;
     small {
         font-family: $header-font-family;
         display: block;
@@ -62,7 +62,8 @@
 
 
     color: $white;
-    background-color: #000;
+    //background-color: #000;
+    background: linear-gradient(45deg,#8ac6d0,#e0aeb1 50%,#ecbabe);
     &:after {
         content:'';
         //z-index: 2;
@@ -80,14 +81,14 @@
 }
 .kepzeshead__content {
     position: relative;
-    padding-top: 5rem;
+    padding-top: 2rem;
     padding-bottom: 1.5rem;
     //z-index: 1;
     @include breakpoint(tablet) {
-        padding-top: 20vw;
+        padding-top: 14vw;
     }
     @include breakpoint(large) {
-        padding-top: 16vw;
+        padding-top: 10vw;
         padding-bottom: 3rem;
     }
 }
@@ -102,8 +103,9 @@
         height:100%;
         width:100%;
         object-fit: cover;
-        mix-blend-mode: multiply;
-        filter: grayscale(1);
+        // mix-blend-mode: multiply;
+        // filter: grayscale(.75);
+        // opacity: .5;
     }
 }
 .kepzeshead__imgwrap {
@@ -111,16 +113,16 @@
     height:100%;
     max-width: $global-width*1.1;
     margin:0 auto;
-    background-color: $primary-color;
-    background-image: linear-gradient(60deg, $primary-color, $secondary-color);
-    .page-template-tmpl-kepzesek & {
-        background-color: $success-color;
-        background-image: linear-gradient(60deg, $success-color, $primary-color);
-    }
-    .page-template-tmpl-kiemelt & {
-        background-color: $alert-color;
-        background-image: linear-gradient(60deg, $alert-color, $warning-color);
-    }
+    background-color: $secondary-color;
+    background-image: linear-gradient(60deg, $secondary-color, $success-color);
+    // .page-template-tmpl-kepzesek & {
+    //     background-color: $success-color;
+    //     background-image: linear-gradient(60deg, $success-color, $primary-color);
+    // }
+    // .page-template-tmpl-kiemelt & {
+    //     background-color: $alert-color;
+    //     background-image: linear-gradient(60deg, $alert-color, $warning-color);
+    // }
     @include breakpoint(xxlarge) {
         -webkit-mask-image: -webkit-gradient(
         linear, left top, right top,
@@ -156,20 +158,24 @@
         font-size: 1.333rem;
     }
 }
-.kepzeshead__okjnum {
+.kepzeshead__servicetype {
     font-family: $header-font-family;
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     font-weight: $global-weight-bold;
     line-height: $header-lineheight;
+    //text-transform: uppercase;
 
     margin: 0 0 .125em;
 
     //text-align: right;
 
-    color: $alert-color;
+    color: $success-color;
     small {
         //color:$white;
         font-size: .75em;
+    }
+    a {
+        color:inherit;
     }
 }
 .kepzeshead__lead {

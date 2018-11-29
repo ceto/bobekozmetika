@@ -69,11 +69,14 @@ $global-font-size: 100%;
 $global-width: rem-calc(1440);
 $global-lineheight: 1.5;
 $foundation-palette: (
-  primary: #116d6a,
-  secondary: #128559,
-  success: #10486d,
-  warning: #f7b616,
-  alert: #ec5030,
+
+
+
+  primary: #10486d,
+  secondary: #8AC6D0, 
+  success: #ecbabe,
+  warning: #10486d,
+  alert: #8AC6D0,
 );
 $light-gray: #e6e6e6; $xxlight-gray: scale-color($light-gray, $lightness:87.5%); $xlight-gray: scale-color($light-gray, $lightness:50%);
 $medium-gray: #cacaca;
@@ -81,13 +84,13 @@ $dark-gray: #6a6a6a;
 $black: #0a0a0a;
 $white: #fefefe;
 $body-background: $white;
-$body-font-color: #2f2f2f;
-$body-font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Roboto, Arial, sans-serif;
+$body-font-color: #4e4e4e;
+$body-font-family: 'Open Sans', sans-serif;
 $body-antialiased: true;
 $global-margin: 1rem;
 $global-padding: 1rem;
 $global-position: 1rem;
-$global-weight-normal: normal; $global-weight-light: 300; $global-weight-medium: 500;
+$global-weight-normal: 400; $global-weight-light: 300; $global-weight-medium: 500;
 $global-weight-bold: 700;
 $global-radius: 0;
 $global-menu-padding: 0.7rem 1rem;
@@ -132,7 +135,7 @@ $block-grid-max: 8;
 // 4. Base Typography
 // ------------------
 
-$header-font-family: 'Museo', serif;
+$header-font-family: 'Playfair Display', serif;
 $header-font-weight: $global-weight-bold;
 $header-font-style: normal;
 $font-family-monospace: Consolas, 'Liberation Mono', Courier, monospace;

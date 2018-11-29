@@ -1,7 +1,8 @@
 .toprow {
     @include clearfix();
-    background-color: $xxlight-gray;
-    border-bottom: 1px solid $xlight-gray;
+    background-color: $xlight-gray;
+    //background: linear-gradient(45deg, $secondary-color 0%, rgb(224, 174, 177) 50%, $success-color 100%);
+    //border-bottom: 1px solid $light-gray;
     color:$dark-gray;
 }
 .toprow__nav {

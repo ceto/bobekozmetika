@@ -41,7 +41,7 @@ html {
 }
 
 .lead {
-    //font-family: $header-font-family;
+    font-family: $header-font-family;
     font-weight: $global-weight-bold;
     @include breakpoint(medium down) {
         font-size: 100%;

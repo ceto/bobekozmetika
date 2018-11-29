@@ -21,12 +21,14 @@
                 <div class="grid-x grid-margin-x">
                     <div class="cell medium-6 large-3">
                         <h4>Cím</h4>
-                        <p><strong>BGSZC Teleki Blanka Közgazdasági Szakgimnáziuma</strong><br />
-                            H-1095 Budapest,<br />
-                            Mester utca 23.<br />
+                        <p><strong>Böbe Kozmetika - Pesterzsébet</strong><br />
+                            H-1201 Budapest,<br />
+                            Vörösmarty utca 28/C<br />
                         </p>
-                        <p><strong>Kapunyitás:</strong><br />
-                            Reggel 7-kor, fél órával a első óra kezdése előtt
+                        <p><strong>Nitvatartás</strong><br />
+                            Hétfő - Péntek: 20:00<br>
+                            Szombat: Igény szerint<br>
+                            Vasárnap: Zárva
                         </p>
                     </div>
                     <div class="cell medium-6 large-3">
@@ -35,7 +37,7 @@
                             <a href="tel:+3613280774">+36 (1) 215 9254</a>
                         </p>
                         <p><strong>E-mail:</strong><br />
-                            <a href="mailto:titkarsag@teleki-bp.sulinet.hu">titkarsag@teleki-bp.sulinet.hu</a>
+                            <a href="mailto:szalon@bobekozmetika.hu">szalon@bobekozmetika.hu</a>
                         </p>
                         <p><strong>És még:</strong><br />
                             <a href="https://www.facebook.com/TelekiBlankaKozgazdasagiSzki/" target="_blank" rel="noopener">Facebook</a>
@@ -60,7 +62,7 @@
             <div class="mapcanvas" id="mapcanvas"></div>
         </div>
         <div class="medium-5 xlarge-4 axxlarge-3 ashow-for-tablet cell medium-order-1">
-            <img class="mapphoto" src="<?= get_stylesheet_directory_uri(); ?>/dist/images/teleki-bejarat.jpg" alt="">
+            <img class="mapphoto" src="<?= get_stylesheet_directory_uri(); ?>/dist/images/bejarat.jpg" alt="">
         </div>
     </div>
 </div>

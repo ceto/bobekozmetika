@@ -22,6 +22,6 @@
     }
   },
   "config": {
-    "devUrl": "http://teleki.localhost"
+    "devUrl": "http://bobe.localhost"
   }
 }

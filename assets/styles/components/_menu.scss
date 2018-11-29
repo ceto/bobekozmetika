@@ -9,7 +9,7 @@
 
 .dropdown.menu--main {
     font-family: $header-font-family;
-    font-weight: $global-weight-bold;
+    //font-weight: $global-weight-bold;
     > li {
         &:first-child() {
             > a {
@@ -28,9 +28,9 @@
         }
     }
     a {
-        font-size: 1.25rem;
+        font-size: 1rem;
         padding: .75em .875rem .25em;
-        //color:inherit;
+        color:inherit;
         @include breakpoint('xlarge') {
             //font-size: 1.333rem;
         }
@@ -39,7 +39,7 @@
     .is-active {
         > a {
             background-color: transparent;
-            color: $alert-color;
+            color: inherit;
             text-decoration: underline;
         }
     }
@@ -47,7 +47,7 @@
 
     .is-dropdown-submenu {
 
-        background-color: rgba($primary-color, .95);
+        background-color: rgba($secondary-color, .95);
         border:none;
         padding:1.5em 0 2em;
         box-shadow: 0 .25rem 1rem 0 rgba(#000,.5);
@@ -63,7 +63,7 @@
             color:$white;
             font-family: $body-font-family;
             &:hover, &:focus {
-                background-color: $primary-color;
+                background-color: $secondary-color;
                 color:#fff;
             }
         }
@@ -78,7 +78,7 @@
             height: 0;
             border-left: .666rem solid transparent;  /* left arrow slant */
             border-right: .666rem solid transparent; /* right arrow slant */
-            border-bottom: .666rem solid rgba($primary-color, .95); /* bottom, add background color here */
+            border-bottom: .666rem solid rgba($secondary-color, .95); /* bottom, add background color here */
             font-size: 0;
             line-height: 0;
 
@@ -190,10 +190,10 @@
 
 
 .menu--side {
-    //font-family: $header-font-family;
+    font-family: $header-font-family;
     font-weight: $global-weight-bold;
     margin-bottom: .75rem;
-    font-size: 1.125rem;
+    font-size: .875rem;
     // text-transform: uppercase;
     > li {
         &:not(:last-child) {
@@ -210,7 +210,7 @@
         line-height: $header-lineheight;
         color:inherit;
         &:hover, &:focus {
-            color:$primary-color;
+            color:$secondary-color;
             // &:before {
             //     border-color: currentColor;
             // }
@@ -231,12 +231,13 @@
             &:before {
                 color:$alert-color;
                 content: '';
-                width: .75em;
-                height:.75em;
+                width: .5em;
+                height:.5em;
                 border-radius: .375em;
-                background-color: currentColor;
-                margin-right: .75em;
-                margin-top: .2em;
+                background-color: $success-color;
+                margin-right: 1.5em;
+                transform: translateY(.333em);
+                //margin-top: .333em;
             }
         }
     }
