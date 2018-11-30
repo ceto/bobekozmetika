@@ -6,7 +6,7 @@
     color:$dark-gray;
 }
 .toprow__nav {
-    float:right;
+    float:left;
     max-width: calc(100% - 5rem);
     margin:.333rem 0;
 }
@@ -16,7 +16,7 @@
     font-size: .75rem;
     color:$white;
     display: inline-block;
-    background-color: $alert-color;
+    background-color: $secondary-color;
     padding: .5em 1em;
     margin:.3666rem 0;
     font-weight: $global-weight-bold;
@@ -24,6 +24,6 @@
     border-radius: 1em;
     &:hover, &:focus {
         color:$white;
-        background-color: $warning-color;
+        background-color: $success-color;
     }
 }

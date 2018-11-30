@@ -111,3 +111,12 @@
   background-attachment: fixed, scroll;
 
 }
+
+.front__bottom {
+    background-image: linear-gradient(90deg, rgba(#000,.333) 0,  rgba(#000,.333) 100% ), url(../images/parallax-6.jpg);
+    background-repeat: no-repeat;
+    //background-attachment: fixed;
+    background-size: cover;
+    background-position: center bottom;
+    padding:5vw 0;
+}

@@ -1,5 +1,5 @@
 .orbit-bullets {
-    text-align: left;
+    text-align: center;
     button {
         //border-radius: 0;
     }
@@ -9,14 +9,17 @@
     border-left:none;
     padding:0;
     margin: 0;
+    text-align:center;
+
 
     cite {
         display: block;
         //font-family: $body-font-family;
-        //font-weight: $global-weight-bold;
+        font-weight: $global-weight-bold;
         //color:$warning-color;
         color:inherit;
-        font-size: .75em;
+        font-size: 1.75em;
+        margin-bottom:1em;
         &:before {
             display: none;
         }
@@ -24,10 +27,13 @@
 }
 
 .testimonial, .testimonial p {
-    //font-size: 1rem;
-    color:inherit;
+    font-size: 1.25rem;
+    color:$white;
+    font-weight:$global-weight-normal;
+    //font-family: $header-font-family;
     //font-style: normal;
-    text-shadow: 0 0 3px rgba($primary-color,.5);
+    text-transform: uppercase;
+    text-shadow: 0 0 13px rgba($primary-color,.5);
     @include breakpoint('xlarge') {
         //font-size: 1.333rem;
     }

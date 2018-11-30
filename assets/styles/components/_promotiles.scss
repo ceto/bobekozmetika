@@ -9,81 +9,41 @@
 
     overflow: hidden;
 
-    width: 50%;
-    height: 15rem;
+    width: 100%;
+    height: 20rem;
 
     color: $white;
-    background-image: linear-gradient(60deg, $secondary-color, $success-color);
-
-    &:nth-child(2) {
-        background-image: linear-gradient(60deg, $success-color, $secondary-color);
-    }
-    &:nth-child(3) {
-        background-image: linear-gradient(60deg, $secondary-color, $warning-color);
-
-    }
-    &:not(:last-child) {
-        border-right: .125rem solid #fff;
-    }
+    background-color:#ababab;
 
     @include breakpoint(medium) {
         height: 50vw;
     }
     @include breakpoint(tablet) {
-        width: 25%;
-        height: 40vw;
-        &:not(:last-child) {
-            border-width: .25rem;
-        }
-    }
-    @include breakpoint(large) {
-        height: 40vw;
-        &:not(:last-child) {
-            border-width: .333rem;
-        }
-    }
-    @include breakpoint(xlarge) {
-        height: 33.333vw;
-    }
-    @include breakpoint(xxlarge) {
         height: 30vw;
     }
+    @include breakpoint(large) {
+        height: 25vw;
 
-}
-
-
-.promotile--large {
-    width: 100%;
-
-    text-align: right;
-
-    @include breakpoint(small only ) {
-        border-right: none !important;
-        border-bottom: .125rem solid #fff;
     }
-    @include breakpoint(medium only ) {
-        border-right: none !important;
-        border-bottom: .125rem solid #fff;
+    @include breakpoint(xxlarge) {
+        height: 20vw;
     }
-    @include breakpoint(tablet) {
-        width: 50%;
 
-        border-bottom: none;
-    }
 }
 
 
 .promotile__inner {
+    text-align: center;
     pointer-events: none;
     position: absolute;
-    bottom: 5%;
-
-    max-width: $global-width/2.125;
+    top: 50%;
+    left:50%;
+    transform:translateX(-50%) translateY(-50%);
+    width:100%;
+    max-width: $global-width/4*3;
 
     @include xy-gutters($gutter-position: left right bottom top);
-    .promotile--large & {
-        right: 0;
-    }
+
 }
 .promotile__bgimage {
     position: absolute;
@@ -100,6 +60,7 @@
         width: 100%;
         height: 100%;
         transition: all .4s;
+        //background-color:#ababab;
         &:hover, &:focus {
             background-color: #dedede;
             img {
@@ -117,55 +78,39 @@
 
         object-fit: cover;
         mix-blend-mode: multiply;
-        filter: grayscale(1);
+        //filter: grayscale(1);
 
     }
 }
 .promotile__subtitle {
     font-family: $header-font-family;
-    font-size: .875rem;
+    font-size: 1rem;
     font-weight: $global-weight-bold;
     line-height: 1.2;
 
     margin: 0 0 .125em;
 
     @include breakpoint(large) {
-        font-size: 1rem;
-    }
-    .promotile--large & {
-        font-size: 1.125rem;
-
-        @include breakpoint(large) {
-            font-size: 1.5rem;
-        }
+        font-size: 1.33rem;
     }
 }
 .promotile__title {
-    font-size: 1.125rem;
+    font-size: 1.75rem;
 
     margin: 0 0 0;
 
     @include breakpoint(large) {
-        font-size: 1.5rem;
-    }
-    .promotile--large & {
-        font-size: 1.5rem;
-
-        @include breakpoint(large) {
-            font-size: 2.5rem;
-        }
+        font-size: 2.5rem;
     }
 }
 .promotile__lead {
-    font-size: .875rem;
+    font-size: 1rem;
 
     display: none;
 
     @include breakpoint(large) {
+        font-size:1.125rem;
         display: block;
-    }
-    .promotile--large & {
-        font-size: 1.125rem;
     }
 }
 .promotile__action {

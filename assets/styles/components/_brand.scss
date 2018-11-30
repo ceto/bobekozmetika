@@ -2,14 +2,9 @@
     @include clearfix();
     display: block;
     font-size: .75rem;
-    color:inherit;
+    color:$body-font-color;
     &:hover, &focus {
-        .brand__descr {
-
-        }
-        .brand__descr {
-            //color:$alert-color;
-        }
+        color:inherit;
     }
 
     @include breakpoint('xlarge') {
@@ -17,49 +12,62 @@
     }
 }
 .brand__logo {
+    position: relative;
     display: block;
     float: left;
-    max-width: 4em;
+    font-size:2.25em;
+    width: 1.33em;
+    height: 1.333em;
+    padding-top:.025em;
     image-rendering: -webkit-optimize-contrast;
+    margin-right:.25em;
+    background-color:rgba($success-color,1);
+    //background-color: currentColor;
+    text-align: center;
+    border-radius:50%;
+    //padding:.125em .125em;
+ 
+    //border:1px solid $success-color;
+    svg.icon {
+        display: inline-block;
+        fill:#fff;
+        //fill: $secondary-color;
+    }
 }
 .brand__name {
+    color:inherit;
     font-size: 1em;
     font-weight: $global-weight-bold;
+    //font-family: $header-font-family;
+    text-transform: uppercase;
     line-height: 1;
 
     display: block;
     //float: right;
     //background-color: red;
 
-    width: calc(100% - 2em);
+    //width: calc(100% - 2em);
     margin: .5em 0 .125em;
-    padding-left: .5em;
+    //padding-left: .5em;
 
-    text-transform: uppercase;
-    @include breakpoint('large') {
-        margin-top:.25em;
-        margin-bottom: .0666em;
-    }
-    span {
-        display: none;
 
-        @include breakpoint('large') {
-            display: inline;
-        }
-    }
+
+    // span {
+    //     display: none;
+
+    //     @include breakpoint('large') {
+    //         display: inline;
+    //     }
+    // }
 
 }
 .brand__descr {
+    display: block;
     font-size: .875em;
+    line-height: 1;
     line-height: $header-lineheight;
-    //background-color: blue;
-    display: none;
+    font-family: $header-font-family;
+    font-style: italic;
     clear: right;
 
-    margin-left: 4.6133em;
-    padding-left: 1.333em;
-
-    @include breakpoint('large') {
-        display: block;
-    }
 }

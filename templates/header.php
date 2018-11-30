@@ -2,7 +2,7 @@
     <div class="grid-container">
         <div class="grid-x grid-margin-x">
             <div class="cell">
-                <a href="#" target="_blank" class="toprow__action">Kapcsolat</a>
+                <a href="#" class="toprow__action">Kapcsolat</a>
                 <nav class="toprow__nav">
                     <?php
                     if (has_nav_menu('secondary_navigation')) :
@@ -21,9 +21,9 @@
             <div class="auto cell">
                 <div class="banner__branding">
                     <a class="brand" href="<?= esc_url(home_url('/')); ?>">
-                        <img class="brand__logo" src="<?= get_stylesheet_directory_uri(); ?>/dist/images/logo.svg" alt="<?php bloginfo('name'); ?>">
-                        <span class="brand__name">Böbe <span>Kozmetika </span></span>
-                        <span class="brand__descr">Szalon kezelések Pesterzsébeten</span>
+                        <div class="brand__logo"><svg class="icon"><use xlink:href="#icon-logo"></use></svg></div>
+                        <span class="brand__name">Böbe Kozmetika<span> Pesterzsébet</span></span>
+                        <span class="brand__descr">Budapest 12. kerület &middot; Vörösmarty utca 28/C</span>
                     </a>
                 </div>
             </div>

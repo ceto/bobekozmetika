@@ -140,19 +140,19 @@
         }
     }
     a {
-        text-transform: uppercase;
+        //text-transform: uppercase;
         font-size: .75rem;
         padding: .333em 0;
         color: inherit;
         display: inline-block;
         &:hover, &:focus {
-            color:$alert-color;
+            color:$secondary-color;
         }
     }
 
     .is-active {
         > a {
-            color: $alert-color;
+            color: $secondary-color;
             background-color: transparent;
         }
     }

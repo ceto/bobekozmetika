@@ -1,7 +1,6 @@
 .postcard {
     margin-bottom: 1.5rem;
 }
-
 .postcard__header {
     &:after {
         display: block;
@@ -9,7 +8,7 @@
         width:16.666%;
         max-width: 5rem;
         height:0;
-        border-bottom: .5rem dotted $alert-color;
+        border-bottom: .5rem dotted $success-color;
         margin:1rem 0 1rem;
     }
 
@@ -60,11 +59,16 @@
 }
 .postcard__excerpt {
     font-size: .875rem;
-    margin:.5em 0 .5em 0;
+    margin:.5em 0 1.25em 0;
     p {
         margin:0;
     }
     .excerptmore {
         display: none;
     }
+}
+
+.postcard__excerpt--kiem {
+    //font-family: $header-font-family;
+    //font-weight: $global-weight-bold;
 }

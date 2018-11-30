@@ -10,7 +10,7 @@
                 endif;
             ?>
         </nav>
-        <a href="https://bgaszc-teleki.e-kreta.hu" target="_blank" class="mobilemodal__enaplo button alert tiny">E-NAPLÓ</a>
+        <a href="#" class="mobilemodal__enaplo button alert tiny">Kapcsolat</a>
     </div>
     <nav class="mobilemodal__studentnav">
             <?php

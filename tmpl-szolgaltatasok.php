@@ -18,7 +18,7 @@
     </figure>
     <div class="grid-container">
         <div class="grid-x grid-margin-x align-center">
-            <div class="cell large-8 ">
+            <div class="cell xlarge-10 xxlarge-9 ">
                 <div class="kepzeshead__content">
                     <h1 class="kepzeshead__title"><?php the_title(); ?></h1>
                 </div>
@@ -26,31 +26,30 @@
         </div>
     </div>
 </header>
-<div id="sthelper" class="grid-container">
+<div class="grid-container">
     <div class="grid-x grid-margin-x align-center">
-        <div class="large-8 cell">
+        <div class="xlarge-10 xxlarge-9 cell">
             <div class="ps ps--narrow">
                 <div class="lead"><?php the_excerpt(); ?></div>
                 <div class="post__content bodycopy">
                     <?php the_content(); ?>
                 </div>
                 <?php
-                    $the_kepzesek = new WP_Query( array(
-                    'posts_per_page'      => -1,
-                    'post_type' => array(service),
-                    'orderby' => 'menu_order',
-                    'order' => 'ASC'
-                    ));
+                    $the_servicetypes = get_terms( array(
+                        'taxonomy' => 'service-type',
+                        'hide_empty' => true,
+                    ) );
                 ?>
                 <div class="ps ps--narrow">
                     <div class="grid-x grid-margin-x grid-margin-y tablet-up-2 large-up-2 xxlarge-up-2">
-                        <?php while ($the_kepzesek->have_posts() ) : $the_kepzesek->the_post(); ?>
-                        <?php setup_postdata( $post ); ?>
+                        <?php foreach ($the_servicetypes as $servicetype ) : ?>
+                        <?php //setup_postdata( $post ); ?>
                         <div class="cell">
-                            <?php get_template_part('templates/kepzescard' ); ?>
+
+                            <?php get_template_part('templates/stypecard' ); ?>
                         </div>
-                        <?php endwhile; ?>
-                        <?php wp_reset_postdata(); ?>
+                        <?php endforeach; ?>
+                        <?php //wp_reset_postdata(); ?>
                     </div>
                 </div>
                 <footer class="post__footer">
