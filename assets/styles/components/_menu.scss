@@ -7,9 +7,14 @@
     @extend .menu;
 }
 
-.dropdown.menu--main {
+.menu--main {
+    margin: .75rem 0 2rem;
     font-family: $header-font-family;
-    //font-weight: $global-weight-bold;
+    font-size:.75rem;
+    font-weight: $global-weight-bold;
+    @include breakpoint('tablet') {
+        font-size: .875rem;
+    }
     > li {
         &:first-child() {
             > a {
@@ -21,26 +26,33 @@
                 padding-right:0;
             }
         }
-        &.is-dropdown-submenu-parent>a:after,
-        &.is-dropdown-submenu-parent>a:after {
-            margin-top:.125em;
-            right:.4em;
+
+        &:not(:last-child()):after {
+            content:'•';
+            display: inline-block;
+            margin:0 .333em;
+            padding: .333em 0;
+            line-height: 1;
+            //color:currentColor;
+            opacity:.5;
+            //transform: translateY(.75em);
         }
     }
     a {
-        font-size: 1rem;
-        padding: .75em .875rem .25em;
+        padding: .333em 0;
         color:inherit;
-        @include breakpoint('xlarge') {
-            //font-size: 1.333rem;
+        &:hover, &:focus {
+            color:$secondary-color;
         }
     }
 
     .is-active {
         > a {
             background-color: transparent;
-            color: inherit;
-            text-decoration: underline;
+            color: $secondary-color;
+            //color:$dark-gray;
+            color:inherit;
+            //text-decoration: underline;
         }
     }
 
@@ -89,19 +101,21 @@
 }
 
 .menu--mobilemain {
+    margin-top:3rem;
     font-family: $header-font-family;
-    font-weight: $global-weight-bold;
+    //font-weight: $global-weight-bold;
     a {
-        text-transforrm: capitalize;
-        font-size: 1.5rem;
+        //text-transform: capitalize;
+        font-size: 1.25rem;
         padding: .5em 0;
+        color:inherit;
         //color:$white;
     }
 
     .is-active {
         > a {
             background-color: transparent;
-            color: $primary-color;
+            color: inherit;
             text-decoration: underline;
         }
     }
@@ -125,8 +139,12 @@
 
 .menu--student {
     font-weight: $global-weight-bold;
+
+
     > li {
+        white-space: nowrap;
         line-height: 1.4;
+       
         &:not(:last-child()):after{
             content:'•';
             display: inline-block;
@@ -169,11 +187,11 @@
         }
     }
     a {
-        text-transform: uppercase;
+        //text-transform: uppercase;
         font-size: .75rem;
         padding: .125em 0;
         margin:.25em 0;
-        //color: $white;
+        color:inherit;
         display: inline-block;
         &:hover, &:focus {
             //color:$warning-color;
@@ -191,10 +209,10 @@
 
 .menu--side {
     font-family: $header-font-family;
-    font-weight: $global-weight-bold;
+    //font-weight: $global-weight-bold;
     margin-bottom: .75rem;
-    font-size: .875rem;
-    // text-transform: uppercase;
+    font-size: 1rem;
+    //text-transform: uppercase;
     > li {
         &:not(:last-child) {
             margin-bottom: .125em;
@@ -235,7 +253,7 @@
                 height:.5em;
                 border-radius: .375em;
                 background-color: $success-color;
-                margin-right: 1.5em;
+                margin-right: 1em;
                 transform: translateY(.333em);
                 //margin-top: .333em;
             }

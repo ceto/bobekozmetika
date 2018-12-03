@@ -72,9 +72,9 @@ html {
 }
 .button {
     //font-family: $header-font-family;
-    font-weight: $global-weight-bold;
+    //font-weight: $global-weight-bold;
     text-transform: uppercase;
-    text-shadow: 0 0 2px rgba(#000,.25);
+    //text-shadow: 0 0 2px rgba(#000,.25);
 }
 
 blockquote {
@@ -110,6 +110,11 @@ blockquote {
     p, ul, ol, .pswp, blockquote {
         & + h1, & + h2, & + h3, & + h4, & + h5, & + h6 {
             margin-top: 2rem;
+        }
+    }
+    li {
+        &:not(:last-child()) {
+            margin-bottom:.5em;
         }
     }
 }

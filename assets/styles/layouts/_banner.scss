@@ -1,21 +1,18 @@
 .banner {
     //border-top:3px solid $primary-color;
     //border-bottom: 1px solid $light-gray;
-    padding:.5rem 0;
-    @include breakpoint('tablet') {
-        padding:1.25rem 0;
-        //border-top: none;
-    }
-    @include breakpoint('xlarge') {
-        padding:1.25rem 0;
-    }
+    // padding:.5rem 0;
+    // @include breakpoint('tablet') {
+    //     padding:1.25rem 0;
+    //     //border-top: none;
+    // }
+    // @include breakpoint('xlarge') {
+    //     padding:1.25rem 0;
+    // }
 }
 .banner__top {
 
 }
 .banner__nav {
-    //float:right;
-    @include breakpoint('xlarge') {
-        margin-top: .25rem;
-    }
+
 }

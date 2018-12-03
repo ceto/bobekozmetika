@@ -12,7 +12,7 @@
             </div>
         </figure>
         <div class="grid-container">
-            <div class="grid-x grid-margin-x align-center">
+            <div class="grid-x grid-margin-x align-center text-center">
                 <div class="cell xlarge-10 xxlarge-9">
                     <div class="kepzeshead__content">
                         <p class="kepzeshead__servicetype"><a href="<?= get_the_permalink(519) ?>">Szolgáltatások</a></p>
@@ -26,7 +26,7 @@
     <div class="grid-x grid-margin-x align-center">
         <div class="xlarge-10 xxlarge-9 cell">
             <div class="ps ps--narrow">
-            <div class="lead"><?php echo wpautop($term->description); ?></div>
+                <div class="lead"><?php echo wpautop($term->description); ?></div>
             </div>
             <div class="grid-x grid-margin-x grid-margin-y tablet-up-2 large-up-2">
                 <?php while (have_posts()) : the_post(); ?>

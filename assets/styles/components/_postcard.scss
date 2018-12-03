@@ -16,6 +16,7 @@
 .postcard__title {
     font-size: 1.25rem;
     margin:0 0 .125em;
+    text-transform:uppercase;
     @include breakpoint(large) {
          font-size: 1.5rem;
     }

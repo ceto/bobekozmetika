@@ -57,13 +57,13 @@
 .kepzeshead {
     position: relative;
     //border-top:1px solid $xlight-gray;
-    border-bottom:1px solid $xlight-gray;
+    //border-bottom:1px solid $xlight-gray;
     width:100%;
 
 
     color: $white;
-    //background-color: #000;
-    background: linear-gradient(45deg,#8ac6d0,#e0aeb1 50%,#ecbabe);
+    background-color: $body-background;
+    //background: linear-gradient(45deg,#8ac6d0,#e0aeb1 50%,#ecbabe);
     &:after {
         content:'';
         //z-index: 2;
@@ -84,6 +84,8 @@
     padding-top: 2rem;
     padding-bottom: 1.5rem;
     //z-index: 1;
+    color:#fff;
+    text-shadow: 0 0 3rem rgba(#000,1);
     @include breakpoint(tablet) {
         padding-top: 14vw;
     }
@@ -103,9 +105,9 @@
         height:100%;
         width:100%;
         object-fit: cover;
-        // mix-blend-mode: multiply;
-        // filter: grayscale(.75);
-        // opacity: .5;
+        mix-blend-mode: multiply;
+        //filter: grayscale(.75);
+        opacity: .95;
     }
 }
 .kepzeshead__imgwrap {
@@ -113,8 +115,9 @@
     height:100%;
     max-width: $global-width*1.1;
     margin:0 auto;
-    background-color: $secondary-color;
-    background-image: linear-gradient(60deg, $secondary-color, $success-color);
+    background-color: $body-background;
+
+    //background-image: linear-gradient(60deg, $secondary-color, $success-color);
     // .page-template-tmpl-kepzesek & {
     //     background-color: $success-color;
     //     background-image: linear-gradient(60deg, $success-color, $primary-color);
@@ -127,10 +130,10 @@
         -webkit-mask-image: -webkit-gradient(
         linear, left top, right top,
         color-stop(0.00,  rgba(#000,0)),
-        color-stop(0.10,  rgba(#000,.5)),
-        color-stop(0.2,  rgba(#000,1)),
-        color-stop(0.8,  rgba(#000,1)),
-        color-stop(0.9,  rgba(#000,.5)),
+        color-stop(0.2,  rgba(#000,.5)),
+        color-stop(0.3,  rgba(#000,1)),
+        color-stop(0.7,  rgba(#000,1)),
+        color-stop(0.8,  rgba(#000,.5)),
         color-stop(1.00,  rgba(#000,0)));
     }
 }
@@ -138,7 +141,8 @@
 
 .kepzeshead__title {
     //color:$primary-color;
-    //font-weight: $global-weight-normal;
+    font-weight: $global-weight-bold;
+    text-transform: uppercase;
     margin: 0;
     font-size: 1.75rem;
     @include breakpoint(large) {
@@ -163,6 +167,7 @@
     font-size: 1.25rem;
     font-weight: $global-weight-bold;
     line-height: $header-lineheight;
+    //text-transform: uppercase;
     //text-transform: uppercase;
 
     margin: 0 0 .125em;
@@ -214,7 +219,7 @@
 }
 .posthead__title {
     margin:0;
-    color:$primary-color;
+    //color:$primary-color;
     //font-weight: $global-weight-normal;
     a {
         &:hover, &:focus {

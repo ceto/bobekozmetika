@@ -1,27 +1,37 @@
 .brand {
-    @include clearfix();
+    position: relative;
     display: block;
     font-size: .75rem;
     color:$body-font-color;
-    &:hover, &focus {
-        color:inherit;
+    margin:2em auto 0;
+    &:hover, &:focus {
+        color:#000;
     }
 
-    @include breakpoint('xlarge') {
+    @include breakpoint('tablet') {
         font-size: 1rem;
+    }
+    &:after {
+        content:'';
+        display: block;
+        width: 3em;
+        height:0;
+        margin:2em auto .875em;
+        border-bottom:1px solid currentColor;
+        opacity:.5;
     }
 }
 .brand__logo {
     position: relative;
     display: block;
-    float: left;
-    font-size:2.25em;
-    width: 1.33em;
-    height: 1.333em;
-    padding-top:.025em;
+    //float: left;
+    font-size:4.5em;
+    width: 1.3666em;
+    height: 1.3666em;
+    padding:.075em 0 0 .075em;
     image-rendering: -webkit-optimize-contrast;
-    margin-right:.25em;
-    background-color:rgba($success-color,1);
+    margin:0 auto;
+    background-color:rgba($success-color,.125);
     //background-color: currentColor;
     text-align: center;
     border-radius:50%;
@@ -30,25 +40,24 @@
     //border:1px solid $success-color;
     svg.icon {
         display: inline-block;
-        fill:#fff;
-        //fill: $secondary-color;
+        //fill:#fff;
+        fill: $secondary-color;
+        fill:$body-font-color;
     }
 }
 .brand__name {
     color:inherit;
-    font-size: 1em;
-    font-weight: $global-weight-bold;
-    //font-family: $header-font-family;
-    text-transform: uppercase;
+    font-size: 1.875em;
+    //font-weight: $global-weight-bold;
+    letter-spacing: .075em;
+    font-family: $header-font-family;
+    //text-transform: uppercase;
+    font-variant: small-caps;
     line-height: 1;
+    text-align: center;
 
     display: block;
-    //float: right;
-    //background-color: red;
-
-    //width: calc(100% - 2em);
-    margin: .5em 0 .125em;
-    //padding-left: .5em;
+    margin: .75em auto .333em;
 
 
 
@@ -63,11 +72,12 @@
 }
 .brand__descr {
     display: block;
-    font-size: .875em;
+    margin:0 auto;
+    text-align: center;
+    font-size: 1em;
     line-height: 1;
     line-height: $header-lineheight;
     font-family: $header-font-family;
     font-style: italic;
-    clear: right;
 
 }

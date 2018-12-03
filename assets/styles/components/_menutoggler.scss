@@ -1,23 +1,17 @@
 .menutoggler {
     font-weight: $global-weight-bold;
-    font-size: .875rem;
+    font-family: $header-font-family;
+    font-size: .75rem;
     line-height: 1;
+    color:$body-font-color;
 
     display: inline-block;
+    margin:.5rem auto 1.25rem;
 
-    padding: .666em 1.25em;
-    margin:.125rem 0 0 0;
+    padding: .5em 1.25em;
 
-    text-transform: uppercase;
+    border: 1px solid currentColor;
 
-
-    color: $white;
-    border-radius: 1.5em;
-    background-color: $alert-color;
     outline: none;
-    &:hover {
-        background-color: $warning-color;
-        color:$white;
 
-    }
 }

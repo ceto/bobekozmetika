@@ -1,8 +1,9 @@
 .toprow {
     @include clearfix();
-    background-color: $xlight-gray;
+    //background-color: rgba($success-color,.125);
     //background: linear-gradient(45deg, $secondary-color 0%, rgb(224, 174, 177) 50%, $success-color 100%);
-    //border-bottom: 1px solid $light-gray;
+    border-bottom: 1px solid rgba($success-color,.2);
+    border-top: 1px solid rgba($success-color,.2);
     color:$dark-gray;
 }
 .toprow__nav {
@@ -16,7 +17,7 @@
     font-size: .75rem;
     color:$white;
     display: inline-block;
-    background-color: $secondary-color;
+    background-color: $success-color;
     padding: .5em 1em;
     margin:.3666rem 0;
     font-weight: $global-weight-bold;
@@ -26,4 +27,28 @@
         color:$white;
         background-color: $success-color;
     }
+}
+.toprow__callus {
+    margin:.2rem 0;
+    font-size: .75rem;
+    padding-top: .333em;
+    padding-bottom:.333em;
+    padding-left:1em;
+    height:auto;
+    line-height: 1.25;
+    font-weight: $global-weight-bold;
+    //text-transform: uppercase;
+    color:$body-font-color;
+    border-radius:1em; 
+    background-color: transparent;
+    border-color: transparent;
+    color:$body-font-color;
+    //color:#fff;
+    &:focus {
+        //border-color: #000;
+        //background-color: #000;
+        background-color: transparent;
+        border-color: transparent;
+    }
+
 }

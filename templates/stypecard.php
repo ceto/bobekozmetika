@@ -27,5 +27,5 @@
         </ul>    
     <?php echo wpautop($servicetype->description); ?>
   </div>
-  <a class="button tiny secondary" href="<?= get_term_link($servicetype) ?>">Mutasd a részleteket</a>
+  <a class="button tiny dark hollow" href="<?= get_term_link($servicetype) ?>">Mutasd a részleteket</a>
 </section>

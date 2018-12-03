@@ -1,6 +1,7 @@
 <?php use Roots\Sage\Titles; ?>
 <?php while (have_posts()) : the_post(); ?>
-<div class="grid-container full">
+<br>
+<div class="grid-container full aps--clight">
     <div class="grid-x">
         <div class="tablet-6">
             <img src="<?= get_stylesheet_directory_uri(); ?>/dist/images/bobeportre_crop.jpg">
@@ -8,15 +9,15 @@
         <div class="tablet-6">
             <div class="grid-x grid-padding-x">
                 <div class="cell xxlarge-8">
-                <br>
+                    <br><br><br><br>
                     <h2>Egyéni igényekre szabott</h2>
                     <h1>Kozmetikai kezelések GIGI termékekkel</h1>
                     <div class="lead"><p>Várunk minden szépülni vágyó hölgyet bármilyen kozmetikai probléma megoldására – személyre szabott, egyéni szaktanácsadással egybekötve – és egy pihentető relaxálásra!</p></div>
-                    <a href="<?= get_the_permalink(519) ?>" class="button success">Mutasd a szolgáltatásokat</a>  
+                    <a href="<?= get_the_permalink(519) ?>" class="button dark hollow">Mutasd a szolgáltatásokat</a>  
                 </div>
             </div>
        </div>
-
+    </div>
 </div>     
 
 

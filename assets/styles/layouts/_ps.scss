@@ -74,6 +74,11 @@
   border-color: $xlight-gray;
 }
 
+.ps--clight {
+    background-color:rgba($success-color,.125);
+    border-color: rgba($success-color,.2);
+}
+
 
 .ps--accent {
   background-color: $warning-color;

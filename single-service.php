@@ -15,8 +15,8 @@
             </div>
         </figure>
         <div class="grid-container">
-            <div class="grid-x grid-margin-x align-right">
-                <div class="cell large-8">
+            <div class="grid-x grid-margin-x">
+                <div class="cell tablet-10 tablet-offset-1 large-6 large-offset-3 xxlarge-offset-4">
                     <div class="kepzeshead__content">
                         <p class="kepzeshead__servicetype"><a href="<?= get_term_link($term) ?>"><?= $term->name ?></a></p>
                         <h1 class="kepzeshead__title"><?php the_title(); ?></h1>
@@ -26,8 +26,8 @@
         </div>
     </header>
     <div id="sthelper" class="grid-container">
-        <div class="grid-x grid-margin-x">
-            <div class="large-8 large-order-2 cell">
+        <div class="grid-x grid-margin-x align-center">
+            <div class="tablet-10 large-9 xxlarge-7 large-order-2 cell">
                 <div class="ps ps--narrow">
                     <div class="lead"><?php the_excerpt(); ?></div>
                     <div class="kepzes__content bodycopy">
@@ -41,7 +41,7 @@
                     <?php comments_template('/templates/comments.php'); ?>
                 </div>
             </div>
-            <div class="large-4 large-order-1 cell kepzes__navcell" data-sticky-container>
+            <div class="large-3 large-order-1 cell kepzes__navcell" data-sticky-container>
                 <div class="ps ps--narrow sticky" data-sticky data-sticky-on="large" data-top-anchor="sthelper:top" data-btm-anchor="sthelper:bottom" data-options="marginTop:0;">
                     <nav class="kepzes__nav">
                         <h3 class="widget__title">Szolgáltatások ebben a kategóriában</h3>
