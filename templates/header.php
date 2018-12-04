@@ -18,6 +18,9 @@
                     <option value="tel:">Ági: +36307005653</option>
                 </select>
             </div>
+            <div class="cell hide-for-tablet text-right auto ">
+                <button class="menutoggler" data-open="mobilemodal">Menü</button>
+            </div>
     </div>
 </div>
 </section>
@@ -26,6 +29,7 @@
     <div class="grid-container">
         <div class="grid-x grid-margin-x">
             <div class="cell text-center">
+            
                 <div class="banner__branding">
                     <a class="brand" href="<?= esc_url(home_url('/')); ?>">
                         <div class="brand__logo"><svg class="icon"><use xlink:href="#icon-logo"></use></svg></div>
@@ -33,13 +37,11 @@
                         <span class="brand__descr">Budapest 12. kerület &middot; Vörösmarty utca 28/C</span>
                     </a>
                 </div>
-                <button class="menutoggler hide-for-tablet" data-open="mobilemodal">Menü</button>
-
             </div>
         </div>
     </div>
 </div>
-<nav class="banner__nav show-for-tablet">
+<nav class="banner__nav ashow-for-tablet">
     <div class="grid-container">
         <div class="grid-x grid-margin-x align-center text-align-center">
             <div class="cell">

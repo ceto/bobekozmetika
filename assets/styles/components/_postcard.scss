@@ -1,6 +1,9 @@
 .postcard {
     margin-bottom: 1.5rem;
 }
+.postcard__fig {
+    //margin-bottom:1rem;
+}
 .postcard__header {
     &:after {
         display: block;
@@ -18,7 +21,7 @@
     margin:0 0 .125em;
     text-transform:uppercase;
     @include breakpoint(large) {
-         font-size: 1.5rem;
+         font-size: 1.333rem;
     }
 
     a {

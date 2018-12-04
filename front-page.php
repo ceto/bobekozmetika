@@ -68,7 +68,7 @@
                         <?php the_content(); ?>
                     </header>
                 </div>
-                <div class="grid-x grid-margin-x grid-margin-y small-up-2 tablet-up-3 large-up-3 xlarge-up-4">
+                <div class="grid-x grid-margin-x grid-margin-y small-up-2 tablet-up-3 large-up-3 ">
                     <div class="cell">
                         <?php //the_field('kisblokk_1'); ?>
                         <div class="membercard">

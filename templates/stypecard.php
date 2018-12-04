@@ -1,10 +1,24 @@
 <?php global $servicetype ?>
 <section <?php post_class('postcard'); ?>>
+
   <header class="postcard__header">
+  
     <h2 class="postcard__title">
         <a href="<?= get_term_link($servicetype) ?>"><?= $servicetype->name; ?></a>
     </h2>
+    
   </header>
+  <figure class="postcard__fig">
+  <a href="<?= get_term_link($servicetype) ?>">
+  <?php 
+    if ( $banner = get_field('banner', $servicetype) ) {
+        echo wp_get_attachment_image( $banner[ID], 'full' );
+    }
+    ?>
+  </a>
+</figure> 
+
+   
   <div class="postcard__excerpt postcard__excerpt--kiem">
   <ul class="hlist">
     <?php 

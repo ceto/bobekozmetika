@@ -5,7 +5,7 @@
                     $term = get_queried_object();
 
                     if ($banner = get_field('banner', $term) ) :?>
-                    <?= wp_get_attachment_image( $banner[ID], 'full' ) ?>
+                    <?= wp_get_attachment_image( $banner[ID], 'medium' ) ?>
                 <?php else: ?>
                     <img class="kepzeshead__img" src="<?= get_stylesheet_directory_uri().'/dist/images/nyitolap-stolen.jpg' ?>" alt="<?php the_title(); ?>">
                 <?php endif; ?>
