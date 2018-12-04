@@ -5,7 +5,7 @@
                 <div class="cell small-12 large-shrink text-center large-text-left">
                     <p class="ficonized">
                         <svg class="icon"><use xlink:href="#icon-logo"></use></svg>
-                        <strong class="fupper">Böbe Kozmetika</strong><br>
+                        <strong class="fupper">Böbe Kozmetika Pesterzsébet</strong><br>
                         H-1201 Budapest Vörösmarty utca 28/C
                     </p>
                 </div>

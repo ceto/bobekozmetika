@@ -8,7 +8,8 @@
     @include clearfix();
     border-left:none;
     padding:0;
-    margin: 0;
+    margin: 0 auto;
+    max-width:rem-calc(600);
     text-align:center;
 
 
@@ -18,8 +19,9 @@
         font-weight: $global-weight-bold;
         //color:$warning-color;
         color:inherit;
-        font-size: 1.75em;
-        margin-bottom:1em;
+        font-size: 2.25em;
+        margin-bottom:.5em;
+        text-transform: none;
         &:before {
             display: none;
         }
@@ -27,7 +29,7 @@
 }
 
 .testimonial, .testimonial p {
-    font-size: 1.25rem;
+    font-size: 1rem;
     color:$white;
     font-weight:$global-weight-normal;
     //font-family: $header-font-family;

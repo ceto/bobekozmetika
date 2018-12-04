@@ -13,7 +13,7 @@
             <div class="promotile__lead">
                 <p><?= get_field('text_1',11); ?></p>
             </div>
-            <a href="<?php the_permalink($target->ID); ?>" class="promotile__action button small alert"><?= get_field('button_1',11); ?></a>
+            <a href="<?php the_permalink($target->ID); ?>" class="promotile__action button small light hollow "><?= get_field('button_1',11); ?></a>
         </div>
     </div>
     <!-- <?php $target=get_field('target_2'); ?>

@@ -22,7 +22,7 @@
         height: 30vw;
     }
     @include breakpoint(large) {
-        height: 25vw;
+        height: 30vw;
 
     }
     @include breakpoint(xxlarge) {
@@ -38,9 +38,9 @@
     position: absolute;
     top: 50%;
     left:50%;
-    transform:translateX(-50%) translateY(-50%);
+    transform:translateX(-50%) translateY(-55%);
     width:100%;
-    max-width: $global-width/4*3;
+    max-width: $global-width/2;
 
     @include xy-gutters($gutter-position: left right bottom top);
 
@@ -88,6 +88,7 @@
     font-weight: $global-weight-bold;
     line-height: 1.2;
 
+
     margin: 0 0 .125em;
 
     @include breakpoint(large) {
@@ -96,6 +97,7 @@
 }
 .promotile__title {
     font-size: 1.75rem;
+    text-transform: uppercase;
 
     margin: 0 0 0;
 

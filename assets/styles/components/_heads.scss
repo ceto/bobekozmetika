@@ -85,7 +85,7 @@
     padding-bottom: 1.5rem;
     //z-index: 1;
     color:#fff;
-    text-shadow: 0 0 3rem rgba(#000,1);
+    text-shadow: 0 0 1.5rem rgba(#000,.5);
     @include breakpoint(tablet) {
         padding-top: 14vw;
     }

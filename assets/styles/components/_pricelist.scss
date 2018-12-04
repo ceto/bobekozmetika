@@ -1,0 +1,105 @@
+.pricetable {
+    border: 1px solid $xlight-gray;
+    padding: 10% 7.5%;
+    color:scale-color($body-font-color, $lightness: 15%);
+    @include breakpoint(large) {
+        //font-size:1.125rem;
+    }
+}
+.pricetable__head {
+    margin-bottom:12.5%;
+    text-align:center;
+    p {
+        margin:0;
+        font-weight: $global-weight-bold;
+        text-transform:uppercase;
+        font-size:.75em;
+        color:$success-color;
+    }
+    h2 {
+        //font-weight: $global-weight-bold;
+        font-size:1.666em;
+    }
+}
+
+dl.pricelist  {
+    @include clearfix();
+    line-height:1.4;
+    overflow:hidden;
+    
+    dt {
+        @include clearfix();
+        clear:left;
+        float:left;
+        display: inline-block;
+        //background-color: $body-background;
+        max-width: calc(100% - 6em);
+        //background-color: red;
+        margin:0 0 1.5em;
+        //padding-right:.5em;
+        font-family: $header-font-family;
+        font-weight: $global-weight-bold;
+        position: relative;
+        text-shadow: -3px 1px $body-background, -3px 2px $body-background, -3px 3px $body-background, 3px 1px $body-background, 3px 2px $body-background, 3px 3px $body-background, -2px 1px $body-background, -2px 2px $body-background, -2px 3px $body-background, -1px 1px $body-background, -1px 2px $body-background, -1px 3px $body-background;
+        //, 0px 0px red, 1px 1px red, 2px 2px red, 3px 3px red;
+        //text-transform: uppercase;
+        span {
+            display: block;
+            text-shadow: none;
+            width: min-content;
+            min-width: 100%;
+            //font-family: $body-font-family;
+            //max-width: 90%;
+            font-weight: $global-weight-normal;
+            font-style: italic;
+            font-size:.75em;
+            text-transform:none;
+            margin-top:.125em;
+            color:$body-font-color;
+        }
+
+    }
+
+    dd {
+
+        position: relative;
+        font-family: $header-font-family;
+        font-weight: $global-weight-bold;
+        float:right;
+        max-width:6em;
+        white-space: nowrap;
+        margin:0 0 1.125em;
+        text-align:right;
+        span {
+            position: absolute;
+            display: block;
+            margin:.333em auto 0 auto;
+            line-height: 1;
+            padding:.5em .75em .4em;
+            width: min-content;
+            font-family: $body-font-family;
+            //border:1px solid $xlight-gray;
+            background-color: $xxlight-gray;
+            box-shadow: 0 0 .25rem 0 rgba(#000,.125);
+            border-radius:1em;
+            text-transform: uppercase;
+            font-weight: $global-weight-bold;
+            font-size:.5em;
+        }
+        &:before {
+            content:'';
+            z-index:-1;
+            position: absolute;
+            right:calc(100% + .25em);
+            top:1.1025em;
+            width:rem-calc(768);
+            height:0;
+            border-bottom:1px dashed rgba(#000,.125);
+        }
+  
+
+    }
+
+
+}
+

@@ -1,6 +1,6 @@
 <?php
 /**
-* Template Name: Szolgáltatások Gyűjtő Sablon
+* Template Name: Árlista Sablon
 */
 ?>
 <?php use Roots\Sage\Titles; ?>
@@ -43,13 +43,33 @@
                 <div class="ps ps--narrow">
                     <div class="grid-x grid-margin-x grid-margin-y tablet-up-2 large-up-2 xxlarge-up-2">
                         <?php foreach ($the_servicetypes as $servicetype ) : ?>
-                        <?php //setup_postdata( $post ); ?>
                         <div class="cell">
 
-                            <?php get_template_part('templates/stypecard' ); ?>
+                            <div class="pricetable">
+                                <header class="pricetable__head">
+                                    <p>Lorem ipsum dolor</p>
+                                    <h2><?= $servicetype->name; ?></h2>
+                                </header>
+                                <dl class="pricelist">
+                                    <dt>IPL Bőrfiatalítás és pigmentfolt halványítás</dt>
+                                    <dd>2.300 Ft<span>Akció</span></dd>
+                                    <dt>Lorem arckezelés</dt>
+                                    <dd>52.000 Ft</dd>
+                                    <dt>Mikrodermabrációs arckezelés <span>Nyári aromaterápiával</span></dt>
+                                    <dd>72.500 Ft<span>Új kezelés</span></dd>
+                                    <dt>IPL Bőrfiatalítás és pigmentfolt halványítás</dt>
+                                    <dd>2.300 Ft</dd>
+                                    <dt>Lorem arckezelés</dt>
+                                    <dd>52.000 Ft</dd>
+                                    <dt>Tű nélküli mezoterápia <span>Lorem ipsum dolor sit amet</span></dt>
+                                    <dd>22.000 Ft</dd>
+                                    <dt>Lézeres archalványítás</dt>
+                                    <dd>18.600 Ft</dd>
+                                </dl> 
+                          
+                            </div>
                         </div>
                         <?php endforeach; ?>
-                        <?php //wp_reset_postdata(); ?>
                     </div>
                 </div>
                 <footer class="post__footer">

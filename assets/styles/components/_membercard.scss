@@ -1,12 +1,16 @@
 .membercard {
     text-align: center;
     //margin-bottom: 1rem
+    background-color: rgba($success-color,.125);
+    border: 1px solid rgba($success-color,.25);
+    padding-bottom:5%;
 }
 .membercard__fig {
     position: relative;
     width:100%;
     height:0;
-    padding-bottom: 133%;
+    padding-bottom: 100%;
+    margin:0;
     //background-color: red;
 
     img {
@@ -16,33 +20,30 @@
         position: absolute;
         object-fit: cover;
         //border-radius:50%;
-        width: 80%;
-        height: 80%;
-        left: 10%;
-        top:10%;
+        width: 70%;
+        height: 70%;
+        left: 15%;
+        top:15%;
     }
 }
 .membercard__header {
 }
 .membercard__title {
-    font-size: 1rem;
+    font-size: .875rem;
     margin:0 0 0;
     line-height: 1.2;
+    font-weight: $global-weight-bold;
     //color:$warning-color;
-    @include breakpoint(large) {
-         font-size: 1.125rem;
-    }
-    @include breakpoint(xxlarge) {
-         font-size: 1.25rem;
-    }
 }
 .membercard__titulus {
     margin:0;
-    font-size: .875rem;
+    font-size: .75rem;
     line-height: 1.2;
+    font-family: $header-font-family;
+    font-style: italic;
     //font-weight: $global-weight-bold;
     //text-decoration: underline;
-    font-family: $body-font-family;
+    //font-family: $body-font-family;
 }
 
 .membercard__text {

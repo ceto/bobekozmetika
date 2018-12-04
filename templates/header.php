@@ -12,6 +12,7 @@
             </div>
             <div class="cell shrink">
                 <select name="callus" id="callus" class="toprow__callus expanded">
+                    <option value="tel:">FOGLALJ IDŐPONTOT!</option>
                     <option value="tel:">Böbe: +36707705653</option>
                     <option value="tel:">Viki: +36201455653</option>
                     <option value="tel:">Ági: +36307005653</option>

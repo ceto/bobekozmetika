@@ -1,32 +1,32 @@
 <?php use Roots\Sage\Titles; ?>
 <?php while (have_posts()) : the_post(); ?>
-<br>
-<div class="grid-container full aps--clight">
-    <div class="grid-x">
-        <div class="tablet-6">
-            <img src="<?= get_stylesheet_directory_uri(); ?>/dist/images/bobeportre_crop.jpg">
-        </div>
-        <div class="tablet-6">
-            <div class="grid-x grid-padding-x">
-                <div class="cell xxlarge-8">
-                    <br><br><br><br>
-                    <h2>Egyéni igényekre szabott</h2>
-                    <h1>Kozmetikai kezelések GIGI termékekkel</h1>
-                    <div class="lead"><p>Várunk minden szépülni vágyó hölgyet bármilyen kozmetikai probléma megoldására – személyre szabott, egyéni szaktanácsadással egybekötve – és egy pihentető relaxálásra!</p></div>
-                    <a href="<?= get_the_permalink(519) ?>" class="button dark hollow">Mutasd a szolgáltatásokat</a>  
-                </div>
+<div class="ps ps--xlight ps--narrow ps--bordered">
+    <div class="grid-container">
+        <div class="grid-x grid-margin-x grid-margin-y align-center">
+            <div class="cell large-10 xlarge-6 frontintro__imgwrap" >
+                <img src="<?= get_stylesheet_directory_uri(); ?>/dist/images/bobeportre.jpg">
             </div>
-       </div>
+            <div class="cell large-10 xlarge-6 frontintro">
+                <div class="frontintro__content">
+                    <p class="frontintro__pre">Egyéni igényekre szabott</p>
+                    <h1 class="frontintro__main">Kozmetikai kezelések GIGI termékekkel</h1>
+                    <p class="frontintro__post">Személyre szabott kezeléssel és egyéni szaktanácsadással várunk minden szépülni vágyó hölgyet Pesterzsébeten.</p>
+                    <a href="<?= get_the_permalink(519) ?>" class="frontintro__action button dark hollow">Mutasd a szolgáltatásokat</a>  
+                </div>
+
+
+        </div>
+        </div>
     </div>
 </div>     
 
 
-<?php get_template_part( '/templates/breaking'); ?>
+<?php //get_template_part( '/templates/breaking'); ?>
 <div class="ps aps--bordered">
 <div class="grid-container">
-    <div class="grid-x grid-margin-x align-center">
-        <div class="medium-8 tablet-12 large-10 xxlarge-12 cell ps ps--narrow">
-            <h1>A Kozmetika Szolgáltásai</h1>
+    <div class="grid-x grid-margin-x">
+        <div class="medium-8 medium-offset-2 tablet-12 tablet-offset-0 large-10 large-offset-1 xxlarge-9 xxlarge-offset-0 cell ps ps--narrow">
+            <h1>Kozmetikai kezelések és szolgáltatások</h1>
             <div class="lead"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi aperiam beatae dolore explicabo modi quia ea quibusdam exercitationem laborum maiores, reprehenderit accusamus dolor, quasi dignissimos repellendus architecto numquam, vel soluta! 
                         </p></div>
         </div>
@@ -58,47 +58,77 @@
 <section class="front__thecontent ps">
     <div class="grid-container">
         <div class="grid-x grid-margin-x">
-            <div class="cell large-8">
-                <div class="ps ps--narrow ps--nobottom">
+            <div class="cell large-10 large-offset-1 xxlarge-8 xxlarge-offset-0">
+                <div class="ps ps--narrow">
                     <header class="pagehead">
-                        <h1 class="pagehead__title"><?php the_field('focim'); ?></h1>
+                        <h1 class="apagehead__title">Kozmetikánk bemutatkozik<?php //the_field('focim'); ?></h1>
                         <div class="lead pagehead__lead"><?php the_excerpt(); ?></div>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt provident, officiis ad aut eius iure asperiores ipsa ex corrupti assumenda eos? Asperiores perferendis non accusamus, natus nesciunt expedita quasi beatae?</p>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Placeat obcaecati odio nemo repudiandae molestiae eos esse, quis fugit? Aut doloribus sapiente reprehenderit autem sint magnam laborum animi ab tempore nisi.</p>
                         <?php the_content(); ?>
                     </header>
                 </div>
-                <div class="grid-x grid-margin-x">
-                    <div class="tablet-6 large-6 cell">
-                        <div class="ps ps--narrow ps--nobottom">
-                            <?php the_field('kisblokk_1'); ?>
+                <div class="grid-x grid-margin-x grid-margin-y small-up-2 tablet-up-3 large-up-3 xlarge-up-4">
+                    <div class="cell">
+                        <?php //the_field('kisblokk_1'); ?>
+                        <div class="membercard">
+                            <figure class="membercard__fig">
+                                <img src="<?= get_stylesheet_directory_uri(); ?>/dist/images/bobeportre.jpg">
+                            </figure>
+                            <h3 class="membercard__title">Vasné Gáspár Böbe</h3>
+                            <p class="membercard__titulus">Mesterkozmetikus</p>
+                        </div>
+
+
+                    </div>
+                    <div class="cell">
+                        <?php //the_field('kisblokk_2'); ?>
+                        <div class="membercard">
+                            <figure class="membercard__fig">
+                                <img src="<?= get_stylesheet_directory_uri(); ?>/dist/images/bobeportre.jpg">
+                            </figure>
+                            <h3 class="membercard__title">Nagy Tímea Alexandra</h3>
+                            <p class="membercard__titulus">Szem és szempilla</p>
                         </div>
                     </div>
-                    <div class="tablet-6 large-6 cell">
-                        <div class="ps ps--narrow ps--nobottom">
-                            <?php the_field('kisblokk_2'); ?>
+                    <div class="cell">
+                        <?php //the_field('kisblokk_2'); ?>
+                        <div class="membercard">
+                            <figure class="membercard__fig">
+                                <img src="<?= get_stylesheet_directory_uri(); ?>/dist/images/bobeportre.jpg">
+                            </figure>
+                            <h3 class="membercard__title">Ági Kovács</h3>
+                            <p class="membercard__titulus">Száj és Orr</p>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="large-4 cell">
+            <div class="large-10 large-offset-1 xxlarge-4 xxlarge-offset-0 cell">
                 <div class="ps ps--narrow ps--nobottom">
-                    <section class="widget widget--blogcage">
-                        <h3 class="widget__title">Hírek és aktualitások</h3>
-                        <div class="widget__body">
-                            <?php
-                            $the_cageposts = new WP_Query( array(
-                            'posts_per_page'      => 4,
-                            'post__not_in'            => array($alreadyprinted),
-                            //'ignore_sticky_posts' => 1,
-                            )); ?>
-                            <ul class="blogcage">
-                                <?php while ( $the_cageposts->have_posts() ) : $the_cageposts->the_post(); ?>
-                                <?php setup_postdata( $post ); ?>
-                                <?php get_template_part('templates/blogcage' ); ?>
-                                <?php endwhile; ?>
-                            </ul>
-                            <?php wp_reset_query(); ?>
-                            <a href="<?php echo get_permalink( get_option( 'page_for_posts' ) ); ?>" class="readmore">Még több hír a blogon</a>
-                        </div>
+                <section class="pricetable">
+                    <header class="pricetable__head">
+                        <p>Lorem ipsum dolor</p>
+                        <h2>Gépi kezelések</h2>
+                    </header>
+                    <dl class="pricelist">
+                        <dt>IPL Bőrfiatalítás és pigmentfolt halványítás</dt>
+                        <dd>2.300 Ft<span>Akció</span></dd>
+                        <dt>Lorem arckezelés</dt>
+                        <dd>52.000 Ft</dd>
+                        <dt>Mikrodermabrációs arckezelés <span>Nyári aromaterápiával</span></dt>
+                        <dd>72.500 Ft<span>Új kezelés</span></dd>
+                        <dt>IPL Bőrfiatalítás és pigmentfolt halványítás</dt>
+                        <dd>2.300 Ft</dd>
+                        <dt>Lorem arckezelés</dt>
+                        <dd>52.000 Ft</dd>
+                        <dt>Tű nélküli mezoterápia <span>Lorem ipsum dolor sit amet</span></dt>
+                        <dd>22.000 Ft</dd>
+                        <dt>Lézeres archalványítás</dt>
+                        <dd>18.600 Ft</dd>
+                    </dl> 
+                    <footer class="pricetable__foot">
+                        <a href="<?= get_the_permalink(32); ?>" class="button small hollow dark">Mutasd a teljes árlistát</a>
+                    </footer>      
                     </section>
                     <?php dynamic_sidebar('sidebar-frontpage'); ?>
                 </div>
