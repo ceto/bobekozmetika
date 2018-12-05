@@ -3,6 +3,7 @@
 }
 .postcard__fig {
     //margin-bottom:1rem;
+    max-width:50%;
 }
 .postcard__header {
     &:after {
@@ -58,7 +59,7 @@
     margin:0 0 0;
     font-family: $header-font-family;
     time {
-        color:$primary-color;
+        //color:$medium-gray;
     }
 }
 .postcard__excerpt {

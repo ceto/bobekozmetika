@@ -2,8 +2,8 @@
     @include clearfix();
     //background-color: rgba($success-color,.125);
     //background: linear-gradient(45deg, $secondary-color 0%, rgb(224, 174, 177) 50%, $success-color 100%);
-    border-bottom: 1px solid rgba($success-color,.2);
-    border-top: 1px solid rgba($success-color,.2);
+    border-bottom: 1px solid rgba($success-color,.125);
+    border-top: 1px solid rgba($success-color,.125);
     color:$dark-gray;
 }
 .toprow__nav {

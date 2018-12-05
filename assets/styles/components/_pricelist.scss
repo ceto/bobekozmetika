@@ -2,6 +2,8 @@
     border: 1px solid $xlight-gray;
     padding: 10% 7.5%;
     color:scale-color($body-font-color, $lightness: 15%);
+    background-color: $body-background;
+    //box-shadow: 0 0 1px 0 rgba(#000,.125);
     @include breakpoint(large) {
         //font-size:1.125rem;
     }

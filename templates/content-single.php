@@ -1,4 +1,4 @@
-<?php get_template_part( '/templates/breaking'); ?>
+<?php //get_template_part( '/templates/breaking'); ?>
 <article <?php post_class(); ?>>
     <header class="posthead ps ps--nobottom">
         <div class="grid-container">
