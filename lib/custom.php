@@ -24,6 +24,21 @@
 
 
 
+
+
+if( function_exists('acf_add_options_page') ) {
+	
+	acf_add_options_page(array(
+		'page_title' 	=> 'Global Settings',
+		'menu_title'	=> 'Global',
+        'menu_slug' 	=> 'global-options',
+        'parent_slug'	=> 'edit.php?post_type=service',
+		'capability'	=> 'edit_posts',
+		'redirect'		=> false
+    ));
+
+}
+
 //exclude sticky posts from main query
 /*
 add_action( 'pre_get_posts', 'teleki_exclude_sticky_posts' );

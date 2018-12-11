@@ -1,35 +1,18 @@
 <section class="promotiles">
-    <?php $target=get_field('target_1',11); ?>
     <div class="promotile">
         <figure class="promotile__bgimage">
-            <a href="<?php the_permalink($target->ID); ?>">
-                <?php $image =  get_field('image_2',11); ?>
+            <a href="<?= get_field('promo_ctalink','option'); ?>">
+                <?php $image =  get_field('promo_bgimg','option'); ?>
                 <?= wp_get_attachment_image( $image[ID], 'full' ) ?>
             </a>
         </figure>
         <div class="promotile__inner">
-            <p class="promotile__subtitle"><?= get_field('subtitle_1',11); ?></p>
-            <h3 class="promotile__title"><?= get_field('title_1',11); ?></h3>
+            <p class="promotile__subtitle"><?= get_field('promo_subtitle','option'); ?></p>
+            <h3 class="promotile__title"><?= get_field('promo_title','option'); ?></h3>
             <div class="promotile__lead">
-                <p><?= get_field('text_1',11); ?></p>
+                <p><?= get_field('promo_lead','option'); ?></p>
             </div>
-            <a href="<?php the_permalink($target->ID); ?>" class="promotile__action button small light hollow "><?= get_field('button_1',11); ?></a>
+            <a href="<?= get_field('promo_ctalink','option'); ?>" class="promotile__action button small light hollow "><?= get_field('promo_ctatext','option'); ?></a>
         </div>
     </div>
-    <!-- <?php $target=get_field('target_2'); ?>
-    <div class="promotile promotile--large">
-        <figure class="promotile__bgimage">
-            <a href="<?php the_permalink($target->ID); ?>">
-                <?php $image =  get_field('image_2'); s?>
-                <?= wp_get_attachment_image( $image[ID], 'large' ) ?>
-            </a>
-        </figure>
-        <div class="promotile__inner">
-            <p class="promotile__subtitle"><?= get_field('subtitle_2'); ?></p>
-            <h3 class="promotile__title"><?= get_field('title_2'); ?></h3>
-            <a href="<?php the_permalink($target->ID) ?>" class="promotile__action promotile__action--onlyicon">
-                <svg class="icon"><use xlink:href="#icon-arrow-outline-right"></use></svg>
-            </a>
-        </div>
-    </div> -->
 </section>
