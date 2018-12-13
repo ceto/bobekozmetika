@@ -1,0 +1,32 @@
+.sectionhead {
+    font-size: 1.75rem;
+    &:after {
+        content:'';
+        display: inline-block;
+        height:0;
+        width:2em;
+        border-top:1px solid $body-font-color;
+        opacity: .5;
+        margin:.333em auto .25em;  
+    }
+    @include breakpoint(tablet) {
+        font-size:2.5rem;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        font-size:1em;
+        margin:0;
+        
+        small {
+            display: block;
+            font-size: .5em;
+            line-height: 1.2;
+            //font-family: $body-font-family;
+            //text-transform: uppercase;
+            color: inherit;
+            font-weight: $global-weight-bold;
+            opacity: .875;
+            margin:0 0 .125em;
+        }
+    }
+}

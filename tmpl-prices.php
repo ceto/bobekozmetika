@@ -47,25 +47,43 @@
 
                             <div class="pricetable">
                                 <header class="pricetable__head">
-                                    <p>Lorem ipsum dolor</p>
-                                    <h2><?= $servicetype->name; ?></h2>
+                                <?php if ( $prtbl_subtitle=get_field('prtbl_subtitle','service-type_'.$servicetype->term_id) ) :?>
+                                <p><?= $prtbl_subtitle ?></p>
+                                <?php endif; ?>
+                                <h2><?= get_field('prtbl_title','service-type_'.$servicetype->term_id); ?></h2>
                                 </header>
                                 <dl class="pricelist">
-                                    <dt>IPL Bőrfiatalítás és pigmentfolt halványítás</dt>
-                                    <dd>2.300 Ft<span>Akció</span></dd>
-                                    <dt>Lorem arckezelés</dt>
-                                    <dd>52.000 Ft</dd>
-                                    <dt>Mikrodermabrációs arckezelés <span>Nyári aromaterápiával</span></dt>
-                                    <dd>72.500 Ft<span>Új kezelés</span></dd>
-                                    <dt>IPL Bőrfiatalítás és pigmentfolt halványítás</dt>
-                                    <dd>2.300 Ft</dd>
-                                    <dt>Lorem arckezelés</dt>
-                                    <dd>52.000 Ft</dd>
-                                    <dt>Tű nélküli mezoterápia <span>Lorem ipsum dolor sit amet</span></dt>
-                                    <dd>22.000 Ft</dd>
-                                    <dt>Lézeres archalványítás</dt>
-                                    <dd>18.600 Ft</dd>
-                                </dl> 
+                                    <?php while( have_rows('prices','service-type_'.$servicetype->term_id) ): the_row(); ?>
+                                        <dt <?= !get_sub_field('price')?'class="selector"':''; ?>>
+                                        <?php 
+                                                $pritem=get_sub_field('title')."\n";
+                                                if ( $description=get_sub_field('description')) {
+                                                    $pritem.= '<small>'.$description.'</small>'."\n";
+                                                }
+                                        ?>
+                                            <?php if ( $link=get_sub_field('link') ): ?>
+                                            <a href="<?= $link['url']; ?>"><?= $pritem;?></a>
+                                            <?php else: ?><?= $pritem;?><?php endif; ?>
+                                        </dt>
+                                        <?php if ($price=get_sub_field('price')) : ?>
+                                        <dd>
+                                            <?php the_sub_field('price'); ?>
+                                            <?php
+                                                if ( $label=get_sub_field('label')) {
+                                                    echo "\n".'<span>'.$label.'</span>'."\n";
+                                                }
+                                            ?>
+                                        </dd>
+                                        <?php endif; ?>
+
+
+                                    <?php endwhile; ?>
+                                </dl>
+                                <?php if ( $prtbl_footer=get_field('prtbl_footer','service-type_'.$servicetype->term_id) ) :?>
+                                <footer class="pricetable__foot">
+                                    <?= $prtbl_footer ?>
+                                </footer>
+                                <?php endif; ?>      
                           
                             </div>
                         </div>

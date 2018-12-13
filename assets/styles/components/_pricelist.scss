@@ -1,6 +1,6 @@
 .pricetable {
     border: 1px solid $xlight-gray;
-    padding: 10% 7.5%;
+    padding: 10% 7.5% 5%;
     color:scale-color($body-font-color, $lightness: 15%);
     background-color: $body-background;
     //box-shadow: 0 0 1px 0 rgba(#000,.125);
@@ -24,13 +24,25 @@
     }
 }
 
+.pricetable__foot {
+    border-top:1px solid $xlight-gray;
+    color:$body-font-color;
+    //text-align: center;
+    padding-top:5%;
+    font-size:.75rem;
+    font-style: italic;
+    //font-family: $header-font-family;
+}
+
 dl.pricelist  {
-    @include clearfix();
+    //@include clearfix();
     line-height:1.4;
     overflow:hidden;
     
     dt {
-        @include clearfix();
+        //@include clearfix();
+        position: relative;
+        z-index: 1;
         clear:left;
         float:left;
         display: inline-block;
@@ -45,10 +57,10 @@ dl.pricelist  {
         text-shadow: -3px 1px $body-background, -3px 2px $body-background, -3px 3px $body-background, 3px 1px $body-background, 3px 2px $body-background, 3px 3px $body-background, -2px 1px $body-background, -2px 2px $body-background, -2px 3px $body-background, -1px 1px $body-background, -1px 2px $body-background, -1px 3px $body-background;
         //, 0px 0px red, 1px 1px red, 2px 2px red, 3px 3px red;
         //text-transform: uppercase;
-        span {
+        small {
             display: block;
             text-shadow: none;
-            width: min-content;
+            //width: min-content;
             min-width: 100%;
             //font-family: $body-font-family;
             //max-width: 90%;
@@ -59,7 +71,31 @@ dl.pricelist  {
             margin-top:.125em;
             color:$body-font-color;
         }
+        a {
+            color:inherit;
+            &:hover, &:focus {
+                color:$secondary-color;
+                //text-decoration:underline;
+            }
+        }
 
+    }
+
+    dt.selector {
+        @include clearfix();
+        //font-size:1.125em;
+        font-weight: $global-weight-normal;
+        //font-family: $body-font-family;
+        margin:1.5em 0 1.5em;
+        color:$body-font-color;
+        //color:$secondary-color;
+        float:none;
+        clear:both;
+        //display:block;
+        max-width: none;
+        width:100%;
+        text-transform: uppercase;
+        //text-align: center;
     }
 
     dd {
@@ -74,6 +110,7 @@ dl.pricelist  {
         text-align:right;
         span {
             position: absolute;
+            right:0;
             display: block;
             margin:.333em auto 0 auto;
             line-height: 1;
@@ -90,18 +127,17 @@ dl.pricelist  {
         }
         &:before {
             content:'';
-            z-index:-1;
+            z-index:0;
             position: absolute;
             right:calc(100% + .25em);
             top:1.1025em;
-            width:rem-calc(768);
+            width:rem-calc(1024);
             height:0;
             border-bottom:1px dashed rgba(#000,.125);
+            opacity: 0;
         }
-  
-
     }
-
+ 
 
 }
 

@@ -11,6 +11,27 @@
 
   $(document).ready(function(){
 
+    $('.owl-slider').owlCarousel({
+        autoWidth:true,
+        loop:true,
+        nav: true,
+        navText: ['‹', '›'],
+        navContainer: '#slidernav',
+        dots: false,
+        responsive:{
+          0:{
+              items:1,
+  
+          },
+          tabletbp: {
+              items:2,
+          },
+          xlargebp: {
+            items:3,
+          }
+        }
+      });
+
   });
 
 })(jQuery); // Fully reference jQuery after this point.

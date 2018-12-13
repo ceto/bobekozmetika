@@ -2,7 +2,7 @@
     text-align: center;
     //margin-bottom: 1rem
     //background-color: rgba($success-color,.125);
-    border: 1px solid rgba($success-color,.25);
+    // border: 1px solid rgba($success-color,.25);
     padding-bottom:5%;
 }
 .membercard__fig {
@@ -26,22 +26,30 @@
         top:5%;
     }
 }
-.membercard__header {
+.membercard__data {
+    padding:0 5%;
 }
 .membercard__title {
-    font-size: .875rem;
-    margin:0 0 0;
+    font-size: 1rem;
+    margin:0 0 .25em;
     line-height: 1.2;
     font-weight: $global-weight-bold;
     //color:$warning-color;
+    a {
+        //color:inherit;
+        &:hover, &:focus {
+            //color:$secondary-color;
+        }
+    }
 }
 .membercard__titulus {
     margin:0;
     font-size: .75rem;
     line-height: 1.2;
     font-family: $header-font-family;
-    font-style: italic;
-    //font-weight: $global-weight-bold;
+    //font-style: italic;
+    font-weight: $global-weight-bold;
+    //color: $secondary-color;
     //text-decoration: underline;
     //font-family: $body-font-family;
 }

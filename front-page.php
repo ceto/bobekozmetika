@@ -29,39 +29,53 @@
         <div class="grid-x grid-margin-x align-justify">
             <div class="cell large-6 xlarge-7 xxlarge-8">
                 <div class="ps ps--narrow">
-                    <header class="pagehead">
-                        <h2>Pihentető-, relaxáló kezelések 25 éve.</h2>
-                        <h1 class="apagehead__title">Kozmetikai üzletünk bemutatkozik<?php //the_field('focim'); ?></h1>
-                        <div class="lead pagehead__lead"><?php the_excerpt(); ?></div>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt provident, officiis ad aut eius iure asperiores ipsa ex corrupti assumenda eos? Asperiores perferendis non accusamus, natus nesciunt expedita quasi beatae?</p>
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Placeat obcaecati odio nemo repudiandae molestiae eos esse, quis fugit? Aut doloribus sapiente reprehenderit autem sint magnam laborum animi ab tempore nisi.</p>
-                        <?php the_content(); ?>
+                    <header class="sectionhead">
+                        <h2>
+                            <small>Pihentető-, relaxáló kezelések 25 éve.</small>
+                            Kozmetikai üzletünket bemutatjuk
+                        </h2>
                     </header>
+                    <div class="lead"><?php the_excerpt(); ?></div>
+                    <?php the_content(); ?>
                 </div>
             </div>
             <div class="cell large-6 xlarge-5 xxlarge-4">
                 <section class="pricetable">
                     <header class="pricetable__head">
-                        <p>Vendégek kedvencei</p>
-                        <h2>Népszerű kezelések</h2>
+                        <?php if ( $prtbl_subtitle=get_field('prtbl_subtitle') ) :?>
+                        <p><?= $prtbl_subtitle ?></p>
+                        <?php endif; ?>
+                        <h2><?php the_field('prtbl_title') ?></h2>
                     </header>
                     <dl class="pricelist">
-                        <dt>IPL Bőrfiatalítás és pigmentfolt halványítás</dt>
-                        <dd>2.300 Ft<span>Akció</span></dd>
-                        <dt>Lorem arckezelés</dt>
-                        <dd>52.000 Ft</dd>
-                        <dt>Mikrodermabrációs arckezelés <span>Nyári aromaterápiával</span></dt>
-                        <dd>72.500 Ft<span>Új kezelés</span></dd>
-                        <dt>IPL Bőrfiatalítás és pigmentfolt halványítás</dt>
-                        <dd>2.300 Ft</dd>
-                        <dt>Lorem arckezelés</dt>
-                        <dd>52.000 Ft</dd>
-                        <dt>Tű nélküli mezoterápia <span>Lorem ipsum dolor sit amet</span></dt>
-                        <dd>22.000 Ft</dd>
-                        <dt>Lézeres archalványítás</dt>
-                        <dd>18.600 Ft</dd>
+                        <?php while( have_rows('prices') ): the_row(); ?>
+                            <dt <?= !get_sub_field('price')?'class="selector"':''; ?>>
+                               <?php 
+                                    $pritem=get_sub_field('title')."\n";
+                                    if ( $description=get_sub_field('description')) {
+                                        $pritem.= '<small>'.$description.'</small>'."\n";
+                                    }
+                               ?>
+                                <?php if ( $link=get_sub_field('link') ): ?>
+                                <a href="<?= $link['url']; ?>"><?= $pritem;?></a>
+                                <?php else: ?><?= $pritem;?><?php endif; ?>
+                            </dt>
+                            <?php if ($price=get_sub_field('price')) : ?>
+                            <dd>
+                                <?php the_sub_field('price'); ?>
+                                <?php
+                                    if ( $label=get_sub_field('label')) {
+                                        echo "\n".'<span>'.$label.'</span>'."\n";
+                                    }
+                                ?>
+                            </dd>
+                            <?php endif; ?>
+
+
+                        <?php endwhile; ?>
                     </dl> 
                     <footer class="pricetable__foot">
+                        <?php the_field('prtbl_footer') ?>
                         <a href="<?= get_the_permalink(32); ?>" class="button small hollow dark">Mutasd a teljes árlistát</a>
                     </footer>      
                 </section>
@@ -75,11 +89,13 @@
 
 
 <?php get_template_part( '/templates/promo','tiles'); ?>
-<div class="ps aps--bordered">
+<div class="ps">
     <div class="grid-container">
         <div class="grid-x grid-margin-x align-center">
             <div class="large-10 xlarge-9 xxlarge-12 cell ps ps--narrow">
-                <h1>Kozmetikai kezelések és szolgáltatások</h1>
+                <header class="sectionhead">
+                    <h2><small>Szépülni vagy fiatalodni szeretnél?</small>Ismerd meg szolgáltatásainkat</h2>
+                </header>
                 <div class="lead"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi aperiam beatae dolore explicabo modi quia ea quibusdam exercitationem laborum maiores, reprehenderit accusamus dolor, quasi dignissimos repellendus architecto numquam, vel soluta! 
                             </p></div>
             </div>
@@ -117,52 +133,52 @@
     </div>
 </section>
 
-<div class="ps aps--dark">
+<section id="team" class="ps aps--clight" data-magellan-target="team">
+
     <div class="grid-container">
-        <div class="grid-x grid-margin-x grid-margin-y tablet-up-9 large-up-9 xlarge-up-9 align-center text-center">
+        <div class="grid-x grid-margin-x">
             <div class="cell">
-                        <p>Ismerd meg a csapatot</p>
-                        <h1>Böbe és a kozmetikus lányok</h1>
+                <header class="sectionhead text-center">
+                    <h2><small>Szerettel várunk szalonunkban</small>Böbe és a kozmetikus lányok</h2>
+                </header>
+            </div>
+            <div class="cell">
+                <?php get_template_part( 'templates/home', 'members'); ?>
             </div>
         </div>
-        <div class="grid-x grid-margin-x grid-margin-y small-up-2 tablet-up-3 large-up-3 xlarge-up-4 align-center">
-            <div class="cell">
-                <?php //the_field('kisblokk_1'); ?>
-                <div class="membercard">
-                    <figure class="membercard__fig">
-                        <img src="<?= get_stylesheet_directory_uri(); ?>/dist/images/bobeportre.jpg">
-                    </figure>
-                    <h3 class="membercard__title">Vasné Gáspár Böbe</h3>
-                    <p class="membercard__titulus">Mesterkozmetikus</p>
-                </div>
-
-
-            </div>
-            <div class="cell">
-                <?php //the_field('kisblokk_2'); ?>
-                <div class="membercard">
-                    <figure class="membercard__fig">
-                        <img src="<?= get_stylesheet_directory_uri(); ?>/dist/images/bobeportre.jpg">
-                    </figure>
-                    <h3 class="membercard__title">Nagy Tímea Alexandra</h3>
-                    <p class="membercard__titulus">Szem és szempilla</p>
-                </div>
-            </div>
-            <div class="cell">
-                <?php //the_field('kisblokk_2'); ?>
-                <div class="membercard">
-                    <figure class="membercard__fig">
-                        <img src="<?= get_stylesheet_directory_uri(); ?>/dist/images/bobeportre.jpg">
-                    </figure>
-                    <h3 class="membercard__title">Ági Kovács</h3>
-                    <p class="membercard__titulus">Száj és Orr</p>
-                </div>
-            </div>
-        </div>
-    
     </div>
-</div>
-<div class="ps ps--dark">
+        
+</section>
+
+
+
+<?php
+    $image_ids = get_field('gallery', false, false);
+    if( $image_ids ): ?>
+    <section class="walk__gallery">
+    <div class="grid-container">
+
+        <div class="grid-x grid-margin-x">
+            <div class="cell">
+                <div id="slidernav" class="slidernav owl-nav"></div>
+            </div>
+        </div>
+    </div>
+
+        <div class="bupapslider">
+            <div class="owl-carousel owl-slider">
+                <?php foreach( $image_ids as $image_id ): ?>
+                    <div class="bupapslider__item">
+                        <?= wp_get_attachment_image( $image_id, 'medium_large', true, array( 'class' => 'bupapslider__img') ); ?>
+                    </div>
+                <?php endforeach; ?>
+            </div>
+        </div>
+
+    </section>
+    <?php endif; ?>
+
+<!-- <div class="ps ps--dark">
     <div class="grid-container">
         <div class="grid-x grid-margin-x text-center">
             <div class="cell ps">
@@ -170,6 +186,6 @@
             </div>
         </div>
     </div>
-</div>
+</div> -->
 
 <?php endwhile; ?>
