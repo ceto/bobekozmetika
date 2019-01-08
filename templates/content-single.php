@@ -1,18 +1,21 @@
 <?php //get_template_part( '/templates/breaking'); ?>
 <article <?php post_class(); ?>>
-    <header class="posthead ps ps--nobottom">
+    <header class="posthead ">
         <div class="grid-container">
             <div class="grid-x grid-margin-x align-center">
                 <div class="large-9 xxlarge-8 cell">
                     <div class="posthead__content">
-                        <h1 class="posthead__title">
+                        <?php
+                            the_post_thumbnail('medium_large');
+                        ?>
+                        <h1 class="posthead__title text-center">
                         <?php if (is_single()):  ?>
                         <?php the_title(); ?>
                         <?php else: ?>
                         <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
                         <?php endif; ?>
                         </h1>
-                        <div class="posthead__meta">
+                        <div class="posthead__meta text-center">
                             <?php get_template_part('templates/post-meta'); ?>
                         </div>
                         <?php if (has_excerpt()) : ?>

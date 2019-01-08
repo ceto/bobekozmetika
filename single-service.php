@@ -34,7 +34,53 @@
                         <?php the_content(); ?>
                     </div>
                     <footer class="post__footer">
-                        <?php get_template_part( 'templates/recommend' ) ?>
+
+
+                <?php if (get_field('prtbl_title') ): ?>
+                <section class="pricetable">
+                    <header class="pricetable__head">
+                        <?php if ( $prtbl_subtitle=get_field('prtbl_subtitle') ) :?>
+                        <p><?= $prtbl_subtitle ?></p>
+                        <?php endif; ?>
+                        <h2><?php the_field('prtbl_title') ?></h2>
+                    </header>
+                    <dl class="pricelist">
+                        <?php while( have_rows('prices') ): the_row(); ?>
+                            <dt <?= !get_sub_field('price')?'class="selector"':''; ?>>
+                               <?php 
+                                    $pritem=get_sub_field('title')."\n";
+                                    if ( $description=get_sub_field('description')) {
+                                        $pritem.= '<small>'.$description.'</small>'."\n";
+                                    }
+                               ?>
+                                <?php if ( $link=get_sub_field('link') ): ?>
+                                <a href="<?= $link['url']; ?>"><?= $pritem;?></a>
+                                <?php else: ?><?= $pritem;?><?php endif; ?>
+                            </dt>
+                            <?php if ($price=get_sub_field('price')) : ?>
+                            <dd>
+                                <?php the_sub_field('price'); ?>
+                                <?php
+                                    if ( $label=get_sub_field('label')) {
+                                        echo "\n".'<span>'.$label.'</span>'."\n";
+                                    }
+                                ?>
+                            </dd>
+                            <?php endif; ?>
+
+
+                        <?php endwhile; ?>
+                    </dl>
+                    <footer class="pricetable__foot">
+                        <?php the_field('prtbl_footer') ?>
+                        <a href="<?= get_the_permalink(32); ?>" class="button small hollow dark">Mutasd a teljes árlistát</a>
+                    </footer>      
+                </section>
+                <?php endif; ?>
+
+
+
+                        <?php //get_template_part( 'templates/recommend' ) ?>
                         <?php get_template_part('/templates/postscage' ); ?>
                         <?php get_template_part('/templates/dlcage' ); ?>
                     </footer>

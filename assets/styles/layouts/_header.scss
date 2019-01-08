@@ -28,5 +28,10 @@
             opacity: .875;
             margin:0 0 .125em;
         }
+
+        strong {
+            color:$primary-color;
+            //text-decoration: underline;
+        }
     }
 }

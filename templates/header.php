@@ -11,11 +11,13 @@
                 </nav>
             </div>
             <div class="cell shrink">
-                <select name="callus" id="callus" class="toprow__callus expanded">
-                    <option value="tel:">FOGLALJ IDŐPONTOT!</option>
-                    <option value="tel:">Böbe: +36707705653</option>
-                    <option value="tel:">Viki: +36201455653</option>
-                    <option value="tel:">Ági: +36307005653</option>
+                <select name="callus" id="callus" class="toprow__callus expanded" onChange="window.location.href=this.value;">
+                    <option value="#">FOGLALJ IDŐPONTOT!</option>
+                    <option value="tel:+3612856354">Szalon: +36 1 285 6354</option>
+                    <option value="tel:+36706020915">Böbe: +36 70 602 0915</option>
+                    <option value="tel:+36202806367">Vivi: +36 20 280 6367</option>
+                    <option value="tel:+36304635540">Niki: +36 30 463 5540</option>
+
                 </select>
             </div>
             <div class="cell hide-for-tablet text-right auto ">
@@ -34,7 +36,7 @@
                     <a class="brand" href="<?= esc_url(home_url('/')); ?>">
                         <div class="brand__logo"><svg class="icon"><use xlink:href="#icon-logo"></use></svg></div>
                         <span class="brand__name">Böbe Kozmetika<span> Pesterzsébet</span></span>
-                        <span class="brand__descr">Budapest 12. kerület &middot; Vörösmarty utca 28/C</span>
+                        <span class="brand__descr">Budapest 20. kerület &middot; Vörösmarty utca 28/C</span>
                     </a>
                 </div>
             </div>

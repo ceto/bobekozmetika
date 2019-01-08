@@ -96,8 +96,7 @@
                 <header class="sectionhead">
                     <h2><small>Szépülni vagy fiatalodni szeretnél?</small>Ismerd meg szolgáltatásainkat</h2>
                 </header>
-                <div class="lead"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi aperiam beatae dolore explicabo modi quia ea quibusdam exercitationem laborum maiores, reprehenderit accusamus dolor, quasi dignissimos repellendus architecto numquam, vel soluta! 
-                            </p></div>
+                <div class="lead"><p>Egyéni problémákra és igényekre szabott kezelésekeinket GIGI termékekkel végezzük. Ezek hatásait kozmetikai gépi kezelésekkel fokozzuk. Szalonunk szolgáltatásait az alábbi négy fő csoportban találod meg. Klikkelj a részletekért.</p></div>
             </div>
         </div>
 

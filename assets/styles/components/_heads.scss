@@ -220,6 +220,12 @@
 
 .posthead__content {
     //margin:0 0 1rem;
+
+    img {
+        margin:0 auto 1.5rem;
+        display: block;
+        width: rem-calc(480);
+    }
 }
 .posthead__title {
     margin:0;

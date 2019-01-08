@@ -15,7 +15,7 @@
             <?php if ( $titulus=get_field('titulus') ) :?>
                 <p class="membercard__titulus"><?= $titulus ?></p>
                 <?php else: ?>
-                <p class="membercard__titulus">Kozmetikus</p>
+                <p class="membercard__titulus"><?php the_field('designation') ?></p>
 
             <?php endif; ?>
             <div class="membercard__text">

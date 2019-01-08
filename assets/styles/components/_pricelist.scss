@@ -32,6 +32,9 @@
     font-size:.75rem;
     font-style: italic;
     //font-family: $header-font-family;
+        .button {
+            font-style: normal;
+        }
 }
 
 dl.pricelist  {

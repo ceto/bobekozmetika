@@ -1,3 +1,6 @@
+.grid-container--narrow {
+    max-width: rem-calc(960);
+}
 .mapcanvascell {
     position: relative;
     //min-height:15rem;
@@ -24,10 +27,46 @@
 }
 
 .contactcontent {
+    padding-top:2rem;
     a {
-        //color: $warning-color;
+        color: inherit;
+        &:hover,&:focus {
+            color:$primary-color;
+        }
+    }
+    a.button {
+        color:$white;
     }
     .cell {
         padding-bottom:1.5rem;
+    }
+    h2, h3 {
+        margin-bottom:1em;
+    }
+}
+table {
+    font-size:.875rem;
+    line-height: 1.4;
+    //text-align: center;
+    thead {
+        th {
+            //text-align: center;
+        }
+    }
+    th {
+        font-family: $header-font-family;
+        font-size:1rem;
+        text-align:center;
+        small {
+            font-size:.875em;
+            font-weight: $global-weight-normal;
+            font-family: $body-font-family;
+            //font-style: italic;
+        }
+    }
+}
+tbody {
+    th {
+        text-align: left;
     }
 }
