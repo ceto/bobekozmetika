@@ -1,3 +1,4 @@
+
 <section class="toprow ashow-for-tablet">
     <div class="grid-container">
         <div class="grid-x grid-margin-x align-center">
@@ -5,7 +6,7 @@
                 <nav class="toprow__nav">
                     <?php
                         if (has_nav_menu('primary_navigation')) :
-                    wp_nav_menu(['theme_location' => 'primary_navigation', 'menu_class' => 'menu menu--student', 'items_wrap' => '<ul class="%2$s">%3$s<li class="menu-item menu-facebook menu-item--icon"><a href="#" target="_blank"><svg class="icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-facebook"></use></svg></a></li></ul>']);
+                    wp_nav_menu(['theme_location' => 'primary_navigation', 'menu_class' => 'menu menu--student', 'items_wrap' => '<ul class="%2$s">%3$s<li class="menu-item menu-facebook menu-item--icon"><a href="https://www.facebook.com/bobekozmetika/" target="_blank"><svg class="icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-facebook"></use></svg></a></li></ul>']);
                     endif;
                     ?>
                 </nav>

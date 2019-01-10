@@ -21,10 +21,10 @@
 </div>     
 
 
-<?php //get_template_part( '/templates/breaking'); ?>
+<?php get_template_part( '/templates/breaking'); ?>
 
 
-<section class="front__thecontent ps aps--bordered ps--xlight">
+<section class="front__thecontent ps aps--bordered aps--xlight">
     <div class="grid-container">
         <div class="grid-x grid-margin-x align-justify">
             <div class="cell large-6 xlarge-7 xxlarge-8">

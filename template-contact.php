@@ -53,7 +53,6 @@
         </div>
     </div>
 </div>
-
 <div class="ps" id="opop" name="opop" >
     <div class="grid-container grid-container--narrow">
         <div class="grid-x grid-margin-x grid-margin-y align-center">
@@ -145,7 +144,8 @@
                 </table>
             </div>
             <div class="cell">
-                <h3 class="">Szombati nyitvatartás</h3>
+            <?php the_content(); ?>
+                <!-- <h3 class="">Szombati nyitvatartás</h3>
                 <table class="hover">
                     <thead>
                         <tr>
@@ -167,12 +167,11 @@
                             <th>Január 25.</th><td>Zárva</td>
                         </tr>
                     </tbody>
-                </table>
+                </table> -->
             </div>
         </div>
     </div>
 </div>
-
 <div class="grid-container full">
     <div class="grid-x">
         <div class="medium-7 xlarge-8 axxlarge-9 cell mapcanvascell medium-order-2">
@@ -188,8 +187,8 @@
 <script>
 function initialize() {
 var mapOptions = {
-center: new google.maps.LatLng(47.478830, 19.073160),
-zoom: 17,
+center: new google.maps.LatLng(47.434798, 19.104651),
+zoom: 16,
 zoomControl: true,
 zoomControlOptions: {style: google.maps.ZoomControlStyle.DEFAULT,},
 disableDoubleClickZoom: false,
@@ -206,7 +205,7 @@ styles: [{featureType: "landscape",stylers: [{saturation: -100}, {lightness: 65}
 }
 map = new google.maps.Map(document.getElementById('mapcanvas'), mapOptions);
 //var image = '<?php echo get_stylesheet_directory_uri(); ?>/assets/img/flag.png';
-var myLatLng = new google.maps.LatLng(47.478830, 19.073160);
+var myLatLng = new google.maps.LatLng(47.434798, 19.104651);
 var officeMarker = new google.maps.Marker({
 position: myLatLng,
 map: map,

@@ -25,6 +25,7 @@
             </div>
         </div>
     </header>
+
     <div id="sthelper" class="grid-container">
         <div class="grid-x grid-margin-x align-center">
             <div class="tablet-10 large-9 xxlarge-7 large-order-2 cell">
@@ -122,3 +123,4 @@
     </div>
 </article>
 <?php endwhile; ?>
+<?php get_template_part( '/templates/breaking'); ?>

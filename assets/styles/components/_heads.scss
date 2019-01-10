@@ -211,7 +211,7 @@
     margin:0 0 1rem;
     font-family: $header-font-family;
     time {
-        color:$alert-color;
+        color:$primary-color;
     }
     @include breakpoint(xxlarge) {
         font-size: 1.125rem;
