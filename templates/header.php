@@ -1,4 +1,3 @@
-
 <section class="toprow ashow-for-tablet">
     <div class="grid-container">
         <div class="grid-x grid-margin-x align-center">

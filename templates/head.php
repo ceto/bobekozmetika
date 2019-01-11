@@ -11,12 +11,12 @@
     <link rel="shortcut icon" href="<?= get_stylesheet_directory_uri(); ?>/dist/images/favicons/favicon.ico">
     <meta name="theme-color" content="#ffffff">
     <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-113296718-1"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-25809651-1"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
 
-      gtag('config', 'UA-113296718-1');
+      gtag('config', 'UA-25809651-1');
     </script>
 </head>
