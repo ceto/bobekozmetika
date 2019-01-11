@@ -36,6 +36,7 @@ function bobe_custom_post_type() {
         'label'                 => __( 'Service', 'bobe' ),
         'description'           => __( 'Post Type Description', 'bobe' ),
         'labels'                => $labels,
+        'rewrite'               => array('slug' => __('szolgaltatas','bobe')),
         'supports'              => array( 'title', 'editor', 'thumbnail', 'page-attributes', 'excerpt' ),
         'taxonomies'            => array( 'service-type' ),
         'hierarchical'          => false,
