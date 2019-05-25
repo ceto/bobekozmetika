@@ -16,8 +16,6 @@
                     <option value="tel:+3612856354">Szalon: +36 1 285 6354</option>
                     <option value="tel:+36706020915">Böbe: +36 70 602 0915</option>
                     <option value="tel:+36202806367">Vivi: +36 20 280 6367</option>
-                    <option value="tel:+36304635540">Niki: +36 30 463 5540</option>
-
                 </select>
             </div>
             <div class="cell hide-for-tablet text-right auto ">
@@ -31,7 +29,7 @@
     <div class="grid-container">
         <div class="grid-x grid-margin-x">
             <div class="cell text-center">
-            
+
                 <div class="banner__branding">
                     <a class="brand" href="<?= esc_url(home_url('/')); ?>">
                         <div class="brand__logo"><svg class="icon"><use xlink:href="#icon-logo"></use></svg></div>

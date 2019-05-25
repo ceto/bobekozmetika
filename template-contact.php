@@ -29,7 +29,6 @@
                         <p><strong>Szalon:</strong> <a href="tel:+3612856354">+36 1 285 6354</a><br>
                             <strong>Böbe:</strong> <a href="tel:+36706020915">+36 70 602 0915</a><br>
                             <strong>Vivi:</strong> <a href="tel:+36202806367">+36 20 280 6367</a><br>
-                            <strong>Niki:</strong> <a href="tel:+36304635540">+36 30 463 5540</a>
                         </p>
                         <p><strong>E-mail:</strong><br />
                             <a href="mailto:szalon@bobekozmetika.hu">szalon@bobekozmetika.hu</a>
@@ -61,7 +60,7 @@
                 <h2>Hetek beosztása és munkarend <small>Ezen a héten a
                 <?php
                     $weekNumber = date("W");
-                    if($weekNumber&1) { 
+                    if($weekNumber&1) {
                         echo '<strong>páratlan heti</strong>';
                     } else {
                         echo '<strong>páros heti</strong>';
@@ -85,19 +84,19 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <th>Hétfő</th><td>Böbe és Vivi</td><td>Niki</td>
+                            <th>Hétfő</th><td>Böbe</td><td>Vivi</td>
                         </tr>
                         <tr>
-                            <th>Kedd</th><td>Niki</td><td>Böbe és Vivi</td>
+                            <th>Kedd</th><td>Vivi</td><td>Böbe</td>
                         </tr>
                         <tr>
-                            <th>Szerda</th><td>Böbe és Vivi</td><td>Niki</td>
+                            <th>Szerda</th><td>Böbe</td><td>Vivi</td>
                         </tr>
                         <tr>
-                            <th>Csütörtök</th><td>Niki</td><td>Böbe és Vivi</td>
+                            <th>Csütörtök</th><td>Vivi</td><td>Böbe</td>
                         </tr>
                         <tr>
-                            <th>Péntek</th><td>Böbe és Vivi</td><td>Niki</td>
+                            <th>Péntek</th><td>Böbe</td><td>Vivi</td>
                         </tr>
                         <tr>
                             <th>Szombat</th><td>Érdeklődj telefonon</td><td>Zárva</td>
@@ -120,19 +119,19 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <th>Hétfő</th><td>Niki</td><td>Böbe és Vivi</td>
+                            <th>Hétfő</th><td>Vivi</td><td>Böbe</td>
                         </tr>
                         <tr>
-                            <th>Kedd</th><td>Böbe és Vivi</td><td>Niki</td>
+                            <th>Kedd</th><td>Böbe</td><td>Vivi</td>
                         </tr>
                         <tr>
-                            <th>Szerda</th><td>Niki</td><td>Böbe és Vivi</td>
+                            <th>Szerda</th><td>Vivi</td><td>Böbe</td>
                         </tr>
                         <tr>
-                            <th>Csütörtök</th><td>Böbe és Vivi</td><td>Niki</td>
+                            <th>Csütörtök</th><td>Böbe</td><td>Vivi</td>
                         </tr>
                         <tr>
-                            <th>Péntek</th><td>Niki</td><td>Böbe és Vivi</td>
+                            <th>Péntek</th><td>Vivi</td><td>Böbe</td>
                         </tr>
                         <tr>
                             <th>Szombat</th><td>Érdeklődj telefonon</td><td>Zárva</td>
@@ -155,10 +154,10 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <th>Január 5.</th><td>Böbe és Vivi</td>
+                            <th>Január 5.</th><td>Böbe</td>
                         </tr>
                         <tr>
-                            <th>Január 12.</th><td>Niki</td>
+                            <th>Január 12.</th><td>Vivi</td>
                         </tr>
                         <tr>
                             <th>Január 19.</th><td>Vivi</td>
